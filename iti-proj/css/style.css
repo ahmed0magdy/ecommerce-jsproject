@@ -1,0 +1,204 @@
+/* Start Sign-Up */
+
+body {
+    background-image: url(6.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1400px 1500px;
+}
+h5
+{
+    color: red;
+    text-align: center;
+    border: 2px solid rgb(220, 22, 22);
+    width: 300px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+.sign-up {
+    position: relative;
+    padding-bottom: 100px;
+    padding-top: 125px;
+    background-size: cover;
+}
+
+.sign-up h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #0f3057;
+    text-align: center;
+    margin-bottom: 50px
+}
+
+.sign-up form {
+    max-width: 500px;
+    margin: auto;
+    transition: 3s;
+}
+
+.sign-up form .input {
+    display: block;
+    width: 91%;
+    padding: 10px;
+    height: 20px;
+    margin-bottom: 14px;
+    border: transparent;
+    box-shadow: 1px 1px 2px #AAA;
+    font-size: 14px;
+    -webkit-column-rule: #555;
+    column-rule: #555;
+}
+
+.sign-up form input:first-child {
+    border-radius: 20px 20px 0 0;
+}
+
+.sign-up form .input:last-of-type {
+    border-radius: 0 0 20px 20px;
+    display: inline;
+}
+
+.sign-up form input::placeholder {
+    font-size: 10px;
+}
+
+.sign-up form input:focus {
+    box-shadow: 1px 1px 5px #AAA;
+}
+
+.sign-up form button {
+    width: 50%;
+    padding: 20px;
+    height: 40px;
+    margin-left: 26%;
+    background-color: #0f3057;
+    border-color: #0f3057;
+    box-shadow: 1px 1px 10px #000;
+    cursor: pointer;
+    border-radius: 7px;
+    line-height: 3px;
+    margin-top: 30px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.sign-up form button:hover {
+    background-color: #c4192d;
+    border-color: #c4192d;
+}
+
+i {
+    cursor: pointer;
+    color: #D91B1B
+}
+
+a
+{
+    color: aliceblue;
+    text-align: center;
+}
+/* End Sign-Up */
+
+Start Conact us Page
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #fc0505;
+    border-color: #fc0505;
+  }
+  
+  .contact-clean {
+    background: #fc0505;
+    padding: 80px 0;
+  }
+  
+  @media (max-width:767px) {
+    .contact-clean {
+      padding: 20px 0;
+    }
+  }
+  
+  .contact-clean form {
+    max-width: 480px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 4px;
+    color: #505e6c;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  }
+  
+  @media (max-width:767px) {
+    .contact-clean form {
+      padding: 30px;
+    }
+  }
+  
+  .contact-clean h2 {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 36px;
+    color: inherit;
+  }
+  
+  .contact-clean .form-group:last-child {
+    margin-bottom: 5px;
+  }
+  
+  .contact-clean form .form-control {
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+    outline: none;
+    color: inherit;
+    padding-left: 12px;
+    height: 42px;
+  }
+  
+  .contact-clean form .form-control:focus {
+    border: 1px solid #b2b2b2;
+  }
+  
+  .contact-clean form textarea.form-control {
+    min-height: 100px;
+    max-height: 260px;
+    padding-top: 10px;
+    resize: vertical;
+  }
+  
+  .contact-clean form .btn {
+    padding: 16px 32px;
+    border: none;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    opacity: 0.9;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    line-height: 1;
+    outline: none !important;
+  }
+  
+  .contact-clean form .btn:hover {
+    opacity: 1;
+  }
+  
+  .contact-clean form .btn:active {
+    transform: translateY(1px);
+  }
+  
+  .contact-clean form .btn-primary {
+    background-color: #fc0505 !important;
+    margin-top: 15px;
+    color: #fff;
+  }
+  
+  .message {
+    resize: none;
+  }
+
