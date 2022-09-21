@@ -94,6 +94,7 @@
 .navbar
 {
 	background-color: #00CDCD;
+
 	
 }
 
@@ -836,8 +837,6 @@ body#checkout-page #site-info {
 #paypal-form {
 	margin: 1.5em 0;
 }
-
-
 
 .nav-link{
 	color:whitesmoke !important
