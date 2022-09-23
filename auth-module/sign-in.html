@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sign In</title>
+  </head>
+  <body onload="admin()">
+
+     <!-- Start Sign-Up -->
+       <div class="sign-up">
+           <h1>Sign In</h1>
+           <h5 id="error"></h5>
+
+             <form id='f1' >
+                   <input class="input" type="email"  id='mail' name="mail" placeholder="Email"  onfocus="placeholder = '' " onblur="placeholder = 'Email' " >
+                 
+                   <input id="pass" class="input" id='pass' type="password" placeholder="Password"  onfocus="placeholder = '' " onblur=" placeholder = 'Password' ">
+                    <i id="eye" class="fas fa-eye-slash" onclick="Showpswd()"></i>
+                  <br> <br>
+                 <!-- <input type="checkbox" id='remembrMe' name="chkbox"> <span>Remember me</span> -->
+                   <button type="button" onclick='check(event)'>Sign In</button>
+                 <br><br>
+                <a href="signup.html">Register Now</a>
+             </form>
+       </div>
+
+     <!-- End Sign-Up -->
+    <script src="js/signscript.js"></script>
+  </body>
+</html>
