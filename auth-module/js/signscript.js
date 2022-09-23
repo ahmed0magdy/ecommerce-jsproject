@@ -1,19 +1,5 @@
  // for sign up and storing data 
- var dataarr = new Array();
-
- // dummy data for loading
-function admin()
-{
-    var admindata = {
-        firstName:'admin',
-        lastName:'admin',
-        mail:'admin@admin.com',
-        password:'123456'
-    }
-    dataarr.push(admindata);
-    localStorage.setItem('data',JSON.stringify(dataarr));
-
-}// end admin func.
+ var dataarr = JSON.parse(localStorage.getItem('data')) || [];
 
 // sign up saving data and validation
 function store(event)
@@ -63,34 +49,44 @@ function store(event)
                 mail:mail.value,
                 password:password.value
              }
-
+            var exist = false ;
             var Datastring = localStorage.getItem('data');
-            var objData = JSON.parse(Datastring);
-             var exist = false ;
-            for(let i =0 ; i<objData.length; i++)
-            {         
-                // check if email exists
-                if(objData[i].mail == mail.value) // 0 -> admin -> false but 1 -> duplicate
-                {
-                    alert('This E-mail is already registerd');
-                    exist = true;
-
-                } 
-            }
-           
-            if(!exist)
+            var objData = JSON.parse(Datastring) || [];
+            if(objData.length == 0)
             {
-                    dataarr.push(data);
-                    // console.log(dataarr);
-                    localStorage.setItem('data',JSON.stringify(dataarr));
-                    alert('Your account has been created Successfully!!');
-                    // window.location.href = 'sign-in.html';
-                    // location.assign('sign-in.html');
+                dataarr.push(data);
+                // console.log(dataarr);
+                localStorage.setItem('data',JSON.stringify(dataarr));
+                alert('Your account has been created Successfully!!');
 
             }
+            else
+            {
+                for(let i =0 ; i<objData.length; i++)
+                {         
+                    // check if email exists
+                    if(objData[i].mail == mail.value) 
+                    {
+                        alert('This E-mail is already registerd');
+                        exist = true;
+
+                    } 
+                }
+            
+                if(!exist)
+                {
+                        dataarr.push(data);
+                        // console.log(dataarr);
+                        localStorage.setItem('data',JSON.stringify(dataarr));
+                        alert('Your account has been created Successfully!!');
+                        // window.location.href = 'sign-in.html';
+                        location.assign('sign-in.html');
+
+                }
+            } 
          
           }  // end else saving data  
-          event.preventDefault(); // stop clearning data but not working yet !
+          event.preventDefault(); 
    
 }
 
@@ -98,7 +94,7 @@ function store(event)
 function check(event){
    
     var Datastring = localStorage.getItem('data');
-     var objData = JSON.parse(Datastring);
+     var objData = JSON.parse(Datastring) || [];
      
     let msgerror = document.getElementById('error');
     var userMail = document.getElementById('mail');
