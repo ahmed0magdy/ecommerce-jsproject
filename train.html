@@ -15,57 +15,54 @@
 
 <body>
 
-<section id="nav-bar">
-		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: green;">
-  		
-  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    			<span class="navbar-toggler-icon"></span>
-  		</button>
-  		<div class="pull-right" >
-  		<a style="color:white; font-size: 30px;" href="index.html">Ecommerce Website</a>
-		</div> 
-  		<div class="collapse navbar-collapse" id="navbarNav">
-  		
-    		<ul class="navbar-nav ml-auto">
-    		 <li class="nav-item">
-        		<a style="color:white;" class="nav-link" href="index.html">Home</a>
-      		</li>
-    		 <li class="nav-item">
-        		<a style="color:white;" class="nav-link" href="product.html">Products</a>
-      		</li>
-      		<li class="nav-item">
-        		<a style="color:white;" class="nav-link" href="cart.html">Cart</a>
-			
-      		</li>
-      		
-      		
-      		<li class="nav-item">
-        		<a style="color:white;" class="nav-link" href="aboutus.html">About Us</a>
-      		</li>
-      		
-      		<li class="nav-item">
-        		<a style="color:white;" class="nav-link" href="services.html">Our Services</a>
-      		</li>
-      		
-      		<li class="nav-item">
-        		<a style="color:white;" class="nav-link" href="team.html" tabindex="-1" aria-disabled="true">Our Team</a>
-      		</li>
-      		<li class="nav-item">
-        		<a style="color:white;" class="nav-link" href="contact.html">Contact</a>
-      		</li>
-      		
-      		
-    		</ul>
-  		</div>
-		</nav>
-
-</section>
-
-	<section class="filterbox">
-		<a href="#" class="btn active" data-filter="all">All</a>
-		<a href="#" class="btn active" data-filter="pc">pc</a>
-		<a href="#" class="btn active" data-filter="lap">laptop</a>
-		<a href="#" class="btn active" data-filter="mobile">mobile</a>
+	<header class="container-fluid bg-info">
+		<nav class="container navbar navbar-expand-lg navbar-light bg-info">
+			<a class="navbar-brand" href="#">Dummy Logo</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+		  
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+				  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#">Product</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#">Contact</a>
+				</li>
+				<li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+					Cart <i class="fa fa-shopping-cart"></i>
+				  </a>
+				  <div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Something else here</a>
+				  </div>
+				</li>
+				<li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+					Account <i class="fa fa-user"></i>
+				  </a>
+				  <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Register</a>
+					<a class="dropdown-item" href="#">Login</a>
+				  </div>
+				</li>
+			  </ul>
+			</div>
+		  </nav>
+	</header>
+   
+	<section class="filterbox  pt-4 pl-5">
+		<a href="#" class="btn btn-danger active" data-filter="all">All</a>
+		<a href="#" class="btn btn-dark active" data-filter="pc">pc</a>
+		<a href="#" class="btn btn-info active" data-filter="lap">laptop</a>
+		<a href="#" class="btn btn-success active" data-filter="mobile">mobile</a>
 	</section>
 
 
@@ -80,9 +77,89 @@
 </main>
 	
 	
-<footer class="container-fluid mt-5 text-center">
-   <h5>Copyright &copy; Ecommerce Website 2021</h5>
-  </footer>
+       <!-- Footer -->
+       <div class="container-fluid bg-info">
+		<footer class="page-footer font-small blue pt-4 container bg-info">
+		
+			<!-- Footer Links -->
+			<div class="container-fluid text-center text-md-left">
+		  
+			  <!-- Grid row -->
+			  <div class="row">
+		  
+				<!-- Grid column -->
+				<div class="col-md-6 mt-md-0 mt-3">
+		  
+				  <!-- Content -->
+				  <h5 class="text-uppercase">Logo</h5>
+				  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe eos vel a nihil corrupti vero numquam consequatur labore quibusdam expedita laboriosam, nesciunt id? Voluptate accusantium voluptatibus facere aliquam blanditiis? Tempora provident voluptatibus dolor quis sint.</p>
+		  
+				</div>
+				<!-- Grid column -->
+		  
+				<hr class="clearfix w-100 d-md-none pb-3">
+		  
+				<!-- Grid column -->
+				<div class="col-md-3 mb-md-0 mb-3">
+		  
+				  <!-- Links -->
+				  <h5 class="text-uppercase text-center">navigation links</h5>
+		  
+				  <ul class="list-unstyled text-center">
+					<li>
+					  <a href="#!">Home</a>
+					</li>
+					<li>
+					  <a href="#!">Product</a>
+					</li>
+					<li>
+					  <a href="#!">Cart</a>
+					</li>
+					<li>
+					  <a href="#!">Contact</a>
+					</li>
+				  </ul>
+		  
+				</div>
+				<!-- Grid column -->
+		  
+				<!-- Grid column -->
+				<div class="col-md-3 mb-md-0 mb-3">
+		  
+				  <!-- Links -->
+				  <h5 class="text-uppercase text-center">Our Payment</h5>
+		  
+				  <ul class="list-unstyled text-center">
+					<li>
+					  <a style="font-size:18px" href="#!"> <i style="font-size:20px" class="text-primary fa fa-paypal"></i> paybal</a>
+					</li>
+					<li>
+					  <a style="font-size:18px" href="#!"><i class="text-danger fa fa-cc-visa"></i> Visa</a>
+					</li>
+					<li>
+					  <a style="font-size:18px" href="#!">Cash on Delivery</a>
+					</li>
+		
+				  </ul>
+		  
+				</div>
+				<!-- Grid column -->
+		  
+			  </div>
+			  <!-- Grid row -->
+		  
+			</div>
+			<!-- Footer Links -->
+		  
+			<!-- Copyright -->
+			<div class="footer-copyright text-center py-3">© 2022 Copyright:
+			  <a href="/"> javascript Project</a>
+			</div>
+			<!-- Copyright -->
+		  
+		  </footer>
+		</div>
+		  <!-- Footer -->
 
 </body>
 <script src="product.js"></script>
