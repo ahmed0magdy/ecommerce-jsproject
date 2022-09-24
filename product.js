@@ -14,8 +14,7 @@ const product = [
         price: "250 EGP",
         img: "images/microsoft.jpg",
         quantity: "1",
-        add: " add to cart"
-        ,
+        add: " add to cart",
         brand: "mobile"
     },
     {
