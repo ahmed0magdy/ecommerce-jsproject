@@ -11,7 +11,7 @@ If user has no data, ask him to sign up , Add to cart only for users
 user can sign out
 
 3. Filter feature
-All -> show all product 
+All -> show all product
 Filter by type -> ex. Mobile will show all mobile, sunglasses show all sunglasses etc
 
 4. Details of product feature
