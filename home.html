@@ -11,7 +11,7 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body onload="myuser()">
     <header class="container-fluid bg-info">
 		<nav class="container navbar navbar-expand-lg navbar-light bg-info">
 			<a class="navbar-brand" href="#">Dummy Logo</a>
@@ -25,7 +25,7 @@
 				  <a class="nav-link" href="index.html">Product</a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link" href="#">Contact</a>
+				  <a class="nav-link" href="contact.html">Contact</a>
 				</li>
 				<li class="nav-item dropdown">
 				  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -39,12 +39,11 @@
 				  </div>
 				</li>
 				<li class="nav-item dropdown">
-				  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-					Account <i class="fa fa-user"></i>
+				  <a class="nav-link dropdown-toggle"  href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+					<h5 id="user"></h5> <i class="fa fa-user"></i>
 				  </a>
 				  <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Register</a>
-					<a class="dropdown-item" href="#">Login</a>
+            <a class="dropdown-item" href="#" onclick="logout()">Logout</a>
 				  </div>
 				</li>
 			  </ul>
@@ -212,4 +211,5 @@
 </body>
 <script src="product.js"></script>
 <script src="featured-items.js"></script>
+<script src="signscript.js"></script>
 </html>
