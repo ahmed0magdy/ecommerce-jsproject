@@ -7,8 +7,6 @@
 	<meta name="viewpoint" content="width=device-width,initial-scal=1.0">
 	<meta http-equip="X-UA-compatible" content="ie=edge">
 	<link rel="stylesheet" href="style.css" media="screen" type="text/css" />
-	<link rel="stylesheet" href="cart.css" media="screen" type="text/css" />
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -16,6 +14,7 @@
 </head>
 
 <body>
+
 	<section id="nav-bar">
 		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: green;">
 
@@ -31,7 +30,7 @@
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
 						<a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
-					</li>
+					  </li>
 
 					<li class="nav-item">
 						<a style="color:white;" class="nav-link" href="cart.html">Cart</a>
@@ -61,42 +60,22 @@
 		</nav>
 
 	</section>
-	<div class="container">
-		<!--  Shopping cart table wrapper  -->
-		<div id="shopping-cart">
-			<div class="txt-heading">
-				<h1>Shopping cart</h1>
-			</div>
-			<a onClick="emptyCart()" id="btnEmpty">Empty Cart</a>
-			<a onClick="" href="Checkout.html" class="btn-check">Checkout</a>
-			<a href="index.html" class="btn-check">Continue shopping</a>
-			<table class="tbl-cart" cellpadding="10" cellspacing="1">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th class='text-right' width="10%">Unit Price</th>
-						<th class='text-right' width="5%">Quantity</th>
-						<th class='text-right' width="10%">Sub Total</th>
-					</tr>
-				</thead>
-				<!--  Cart table to load data on "add to cart" action -->
-				<tbody id="cartTableBody">
-				</tbody>
-				<tfoot>
-					<tr>
-						<td class="text-right">Total:</td>
-						<td id="itemCount" class="text-right" colspan="2"></td>
-						<td id="totalAmount" class="text-right"></td>
-					</tr>
-				</tfoot>
-			</table>
-		</div>
-		<!-- Product gallery shell to load HTML from JavaScript code -->
+	<main>
+		<div class="slide-container">
+			<section class="container" id="details">
 
-	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-	<script src="cart.js"></script>
+				</div>
+			</section>
+		</div>
+	</main>
+
+
+	<footer class="container-fluid mt-5 text-center">
+		<h5>Copyright &copy; Ecommerce Website 2021</h5>
+	</footer>
+
 </body>
+<script src="product.js"></script>
+<script src="detail.js"></script>
 
 </html>

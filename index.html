@@ -63,38 +63,74 @@
 
 	</section>
 
-	<section class="filterbox">
-		<a href="#" class="btn active" data-filter="all">All</a>
-		<a href="#" class="btn active" data-filter="pc">pc</a>
-		<a href="#" class="btn active" data-filter="lap">laptop</a>
-		<a href="#" class="btn active" data-filter="mobile">mobile</a>
+	<section class="filterbox container">
+		<div class="row">
+			<div class="col-lg-6 p-3">
+				<a href="#" class="btn active" data-filter="all">All</a>
+				<a href="#" class="btn active" data-filter="pc">pc</a>
+				<a href="#" class="btn active" data-filter="lap">laptop</a>
+				<a href="#" class="btn active" data-filter="mobile">mobile</a>
+			</div>
+		</div>
+
 	</section>
-	<section class="filter-condition">
-		<span>Sort by</span>
-		<select name="" id="select">
-			<option value="Default">Featured</option>
-			<option value="LowToHigh">Low to high</option>
-			<option value="HighToLow">High to low</option>
-		</select>
+	<section class="filter-condition container">
+		<div class="row">
+			<div class="col-lg-6 p-3">
+				<span>Sort by</span>
+				<select name="" id="select">
+					<option value="Default">Featured</option>
+					<option value="LowToHigh">Low to high</option>
+					<option value="HighToLow">High to low</option>
+				</select>
+			</div>
+		</div>
+
 	</section>
 
 
 	<main>
-		<div class="slide-container">
+		<!-- <div class="slide-container">
 			<section class="container">
+				<div class="txt-heading">
+					<h1>Products</h1>
+				</div>
 				<div class="row" id="train">
-
+				
 				</div>
 			</section>
+		</div> -->
+		<div class="container">
+			<div class="row">
+				<div id="product-grid" class="col-lg-12">
+					<div class="txt-heading">
+						<h1>Products</h1>
+					</div>
+					<div id="product-item-container"></div>
+				</div>
+			</div>
+
 		</div>
+
+
+
 	</main>
 
 
-	<footer class="container-fluid mt-5 text-center">
-		<h5>Copyright &copy; Ecommerce Website 2021</h5>
+
+
+	<footer class="text-center">
+		<h5>Copyright &copy; THE SHOP</h5>
 	</footer>
 
+
 </body>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="product.js"></script>
 <script src="main.js"></script>
 <script src="filter.js"></script>
