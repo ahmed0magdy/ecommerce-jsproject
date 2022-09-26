@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
 	<section id="nav-bar">
 		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: green;">
 
@@ -32,11 +31,10 @@
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
 						<a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
-
-					  </li>
+					</li>
 
 					<li class="nav-item">
-						<a style="color:white;" class="cart nav-link" href="cart.html">Cart <span>0</span></a>
+						<a style="color:white;" class="nav-link" href="cart.html">Cart</a>
 
 					</li>
 
@@ -57,75 +55,48 @@
 						<a style="color:white;" class="nav-link" href="contact.html">Contact</a>
 					</li>
 
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-						  Account <i class="fa fa-user"></i>
-						</a>
-						<div class="dropdown-menu">
-				  <a class="dropdown-item" href="signup.html">Register</a>
-						  <a class="dropdown-item" href="sign-in.html">Login</a>
-						</div>
-					  </li>
 
 				</ul>
 			</div>
 		</nav>
 
 	</section>
-
-
-	<section class="filterbox">
-		<a href="#" class="btn active" data-filter="all">All</a>
-		<a href="#" class="btn active" data-filter="pc">pc</a>
-		<a href="#" class="btn active" data-filter="lap">laptop</a>
-		<a href="#" class="btn active" data-filter="mobile">mobile</a>
-	</section>
-	<section class="filter-condition">
-		<span>Sort by</span>
-		<select name="" id="select">
-			<option value="Default">Featured</option>
-			<option value="LowToHigh">Low to high</option>
-			<option value="HighToLow">High to low</option>
-		</select>
-
-	</section>
-
-
-	<main>
-
-		<div class="slide-container">
-			<section class="container">
-				<div class="row" id="train">
-
-				</div>
-			</section>
+	<div class="container">
+		<!--  Shopping cart table wrapper  -->
+		<div id="shopping-cart">
+			<div class="txt-heading">
+				<h1>Shopping cart</h1>
+			</div>
+			<a onClick="emptyCart()" id="btnEmpty">Empty Cart</a>
+			<a onClick="" href="Checkout.html" class="btn-check">Checkout</a>
+			<a href="index.html" class="btn-check">Continue shopping</a>
+			<table class="tbl-cart" cellpadding="10" cellspacing="1">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th class='text-right' width="10%">Unit Price</th>
+						<th class='text-right' width="5%">Quantity</th>
+						<th class='text-right' width="10%">Sub Total</th>
+					</tr>
+				</thead>
+				<!--  Cart table to load data on "add to cart" action -->
+				<tbody id="cartTableBody">
+				</tbody>
+				<tfoot>
+					<tr>
+						<td class="text-right">Total:</td>
+						<td id="itemCount" class="text-right" colspan="2"></td>
+						<td id="totalAmount" class="text-right"></td>
+					</tr>
+				</tfoot>
+			</table>
 		</div>
-	</main>
-  
-  	<!--<div class="container">
-			<div class="row">
-				<div id="product-grid" class="col-lg-12">
-					<div class="txt-heading">
-						<h1>Products</h1>
-					</div>
-					<div id="product-item-container"></div>
-				</div>
-			</div>-->
+		<!-- Product gallery shell to load HTML from JavaScript code -->
 
-
-	<footer class="container-fluid mt-5 text-center">
-		<h5>Copyright &copy; Ecommerce Website 2021</h5>
-	</footer>
-
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="cart.js"></script>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="product.js"></script>
-<script src="main.js"></script>
-<script src="filter.js"></script>
-<script src="addcart.js"></script>
-<script src="cart.js"></script>
-</body>
-
 
 </html>
