@@ -18,6 +18,7 @@ const product = [
         add: " add to cart",
         brand: "mobile",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates neque amet quos sit obcaecati dolorem molestiae consectetur fuga, voluptas perferendis blanditiis iusto officia beatae iure vel veniam voluptatem assumenda veritatis, eum rerum saepe tempore pariatur ea! Suscipit nisi impedit expedita, soluta asperiores sapiente aperiam officia veniam iste doloribus sunt vitae.",
+
     },
     {
         id : 3,

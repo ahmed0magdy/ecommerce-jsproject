@@ -1,16 +1,16 @@
  // for sign up and storing data 
  var dataarr = JSON.parse(localStorage.getItem('data')) || [];
 
+
+var msgerror = document.getElementById('error');
+
 // sign up saving data and validation
 function store(event)
-{
+{   
         var firstName = document.getElementById('Fname');
         var lastName = document.getElementById('Lname');
         var mail = document.getElementById('mail');
         var password = document.getElementById('pass');
-        let msgerror = document.getElementById('error');
-
-    
         var validemail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
         // var validpass =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm;
         //sign up validation
@@ -96,12 +96,17 @@ function check(event){
     var Datastring = localStorage.getItem('data');
      var objData = JSON.parse(Datastring) || [];
      
-    let msgerror = document.getElementById('error');
-    var userMail = document.getElementById('mail');
-    var userPass = document.getElementById('pass');
+    // let msgerror = document.getElementById('error');
+    var userMail = document.getElementById('umail');
+    var userPass = document.getElementById('upass');
     // var userRemember = document.getElementById("remembrMe");
+    if(userMail.value.length == 0)
+    {
+        msgerror.style.display='block';
+        msgerror.textContent = 'Email may not be empty!!';
 
-    if(userPass.value.length == 0)
+    }
+    else if(userPass.value.length == 0)
     {
         msgerror.style.display='block';
         msgerror.textContent = 'Password may not be empty!!';
@@ -110,31 +115,26 @@ function check(event){
     else{
         if(objData.length == 0)
         {
-            alert('no data ,please sign up first')
+            msgerror.textContent = 'No Data Please Sign up first!!';
         }
         else
         {
             for(let i =0 ; i<objData.length; i++)
-            {        console.log('hello test');
+            {      
 
-                if(objData[i].mail == userMail.value)
+                if(objData[i].mail == userMail.value && objData[i].password == userPass.value)
                 {
-                    if(objData[i].password == userPass.value)
-                    {
-                        alert('You are logged in..');
+                       
+                        // alert('You are logged in..');
                         var username = objData[i].firstName;
-                        sessionStorage.username=username;
-                        window.location.href = 'contact.html'; 
-                    }
-                    else
-                    {
-                        msgerror.textContent = 'Incorrect Password!!';
-
-                    }
+                        sessionStorage.username=username; // set user session
+                        window.location.href = 'home.html'; 
+                 
+                   
                 }
                 else
                 {     
-                    msgerror.textContent = 'Email not Regitered!!!!';
+                    msgerror.textContent = 'Incorrect Email or Password!';
                 }
             }
         }
@@ -151,12 +151,12 @@ function myuser()
     var usercon= document.getElementById('user');
     if (sessionStorage.username)
     {
-        usercon.textContent = 'welcome: '+sessionStorage.username;
+        usercon.textContent = sessionStorage.username;
 
     }
     else 
     {
-        usercon.textContent = 'unknown user';
+        window.location.href = 'index.html';
 
     }
 }
@@ -165,7 +165,32 @@ function myuser()
 function logout()
 {
     sessionStorage.removeItem('username');
-    window.location.href = 'contact.html';
+    window.location.href = 'index.html';
+
+}
+function auth()
+{
+    if (sessionStorage.username)
+    {
+        window.location.href = 'home.html';
+
+    }
+}
+
+function msg()
+{
+
+    alert('Thank You , Your Message Sent Successfully');
+    if (sessionStorage.username)
+    {
+        location.assign('home.html');
+    }
+    else
+    {
+        location.assign('index.html');
+
+    }
+
 
 }
 
