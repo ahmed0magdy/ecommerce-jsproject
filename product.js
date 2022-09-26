@@ -11,7 +11,7 @@ const product = [
     },
     {
         id:2,
-        name: 'Death Stranding',
+        name: 'Dead Stranding',
         price: "100 EGP",
         img: "images/microsoft.jpg",
         quantity: 0,
@@ -21,7 +21,7 @@ const product = [
     },
     {
         id : 3,
-        name: 'The Last Of Us 2',
+        name: 'The ast Of Us 2',
         price: "400 EGP",
         img: "images/hp.jpg",
         quantity:1,
@@ -31,7 +31,7 @@ const product = [
     },
     {
         id : 4,
-        name: 'God of War',
+        name: 'God f War',
         price: "350 EGP",
         img: "images/apple.jpg",
         quantity: 0,
@@ -51,7 +51,7 @@ const product = [
     },
     {
         id :6,
-        name: 'The Last Of Us 2',
+        name: 'The Last Of U 2',
         price: "333 EGP",
         img: "images/hp.jpg",
         quantity: 0,
@@ -62,7 +62,7 @@ const product = [
     ,
     {
         id :7,
-        name: 'God of War',
+        name: 'God of ar',
         price: "444 EGP",
         img: "images/apple.jpg",
         quantity: 0,
@@ -72,7 +72,7 @@ const product = [
     },
     {
         id : 8,
-        name: 'Death Stranding',
+        name: 'Deah Stranding',
         price: "800 EGP",
         img: "images/microsoft.jpg",
         quantity: 0,
@@ -82,7 +82,7 @@ const product = [
     },
     {
         id:9,
-        name: 'The Last Of Us 2',
+        name: 'Te Last Of Us 2',
         price: "350 EGP",
         img: "images/hp.jpg",
         quantity: 0,
