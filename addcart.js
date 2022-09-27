@@ -42,13 +42,12 @@ function setItems(product){
             
         }
         cartItems[product.name].quantity += 1;
-        alert("the quantity of the product " +JSON.stringify(product.name) +" " + "is " + cartItems[product.name].quantity)
+       
     }else{
         product.quantity = 1;
         cartItems ={
            [product.name] : product
        }
-       alert("the quantity of the product " +JSON.stringify(product.name) +" " + "is " + cartItems[product.name].quantity)
 
     }
    
@@ -87,7 +86,7 @@ function displayCart() {
             </div>
             <div class="price sm-hide">EGP ${item.price},00</div>
             <div class="quantity">
-                <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
+                <ion-icon class="decrease" name="arrow-dropleft-circle"></ion-icon>
                     <span>${item.quantity}</span>
                 <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
             </div>
@@ -100,7 +99,7 @@ function displayCart() {
                 <h4 class="basketTotal">EGP ${cartCost},00</h4>
             </div>`
 
-        // deleteButtons();
+        deleteButtons();
         manageQuantity();
     }
 }
@@ -117,27 +116,27 @@ function manageQuantity() {
             console.log(cartItems);
             currentQuantity = decreaseButtons[i].parentElement.querySelector('span').textContent;
             console.log(currentQuantity);
-            currentProduct = decreaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+            currentProduct = decreaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent;
             console.log(currentProduct);
 
-            if(cartItems[currentProduct].quantity > 1 ) {
-                cartItems[currentProduct].quantity -= 1;
-                cartNumbers(cartItems[currentProduct], "decrease");
+              if(cartItems[currentProduct].quantity > 1 ) {
+              cartItems[currentProduct].quantity -= 1;
+                CartNumber(cartItems[currentProduct], "decrease");
                 totalCost(cartItems[currentProduct], "decrease");
                 localStorage.setItem('productsInCart', JSON.stringify(cartItems));
                 displayCart();
-            }
+              }
         });
 
         increaseButtons[i].addEventListener('click', () => {
             console.log(cartItems);
             currentQuantity = increaseButtons[i].parentElement.querySelector('span').textContent;
             console.log(currentQuantity);
-            currentProduct = increaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+            currentProduct = increaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent
             console.log(currentProduct);
 
             cartItems[currentProduct].quantity += 1;
-            cartNumbers(cartItems[currentProduct]);
+            CartNumber(cartItems[currentProduct]);
             totalCost(cartItems[currentProduct]);
             localStorage.setItem('productsInCart', JSON.stringify(cartItems));
             displayCart();
@@ -147,7 +146,7 @@ function manageQuantity() {
 
 function deleteButtons() {
     let deleteButtons = document.querySelectorAll('.product ion-icon');
-    let productNumbers = localStorage.getItem('cartNumbers');
+    let productNumbers = localStorage.getItem('cartnumber');
     let cartCost = localStorage.getItem("totalCost");
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
@@ -156,16 +155,16 @@ function deleteButtons() {
 
     for(let i=0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener('click', () => {
-            productName = deleteButtons[i].parentElement.textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+            productName = deleteButtons[i].parentElement.textContent.trim();
            
-            localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].quantity);
+            localStorage.setItem('cartnumber', productNumbers - cartItems[productName].quantity);
             localStorage.setItem('totalCost', cartCost - ( cartItems[productName].price * cartItems[productName].quantity));
 
             delete cartItems[productName];
             localStorage.setItem('productsInCart', JSON.stringify(cartItems));
 
             displayCart();
-            onLoadCartNumbers();
+            onLoadCart();
         })
     }
 }
