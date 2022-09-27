@@ -2,7 +2,7 @@ const product = [
     {
         id:1,
         name: 'God of War',
-        price: "200 EGP",
+        price: 200,
         img: "images/apple.jpg",
         quantity: 0,
         add: " add to cart",
@@ -12,7 +12,7 @@ const product = [
     {
         id:2,
         name: 'Dead Stranding',
-        price: "100 EGP",
+        price: 100,
         img: "images/microsoft.jpg",
         quantity: 0,
         add: " add to cart",
@@ -23,9 +23,9 @@ const product = [
     {
         id : 3,
         name: 'The ast Of Us 2',
-        price: "400 EGP",
+        price: 400,
         img: "images/hp.jpg",
-        quantity:1,
+        quantity:0,
         add: " add to cart",
         brand: "lap",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates neque amet quos sit obcaecati dolorem molestiae consectetur fuga, voluptas perferendis blanditiis iusto officia beatae iure vel veniam voluptatem assumenda veritatis, eum rerum saepe tempore pariatur ea! Suscipit nisi impedit expedita, soluta asperiores sapiente aperiam officia veniam iste doloribus sunt vitae.",
@@ -33,7 +33,7 @@ const product = [
     {
         id : 4,
         name: 'God f War',
-        price: "350 EGP",
+        price: 350,
         img: "images/apple.jpg",
         quantity: 0,
         add: " add to cart",
@@ -43,7 +43,7 @@ const product = [
     {
         id : 5,
         name: 'Death Stranding',
-        price: "150 EGP",
+        price: 150,
         img: "images/microsoft.jpg",
         quantity: 0,
         add: " add to cart",
@@ -53,7 +53,7 @@ const product = [
     {
         id :6,
         name: 'The Last Of U 2',
-        price: "333 EGP",
+        price: 333,
         img: "images/hp.jpg",
         quantity: 0,
         add: " add to cart",
@@ -64,7 +64,7 @@ const product = [
     {
         id :7,
         name: 'God of ar',
-        price: "444 EGP",
+        price: 444,
         img: "images/apple.jpg",
         quantity: 0,
         add: " add to cart",
@@ -74,7 +74,7 @@ const product = [
     {
         id : 8,
         name: 'Deah Stranding',
-        price: "800 EGP",
+        price: 800,
         img: "images/microsoft.jpg",
         quantity: 0,
         add: " add to cart",
@@ -84,7 +84,7 @@ const product = [
     {
         id:9,
         name: 'Te Last Of Us 2',
-        price: "350 EGP",
+        price: 350,
         img: "images/hp.jpg",
         quantity: 0,
         add: " add to cart",
