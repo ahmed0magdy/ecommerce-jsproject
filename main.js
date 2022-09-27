@@ -26,3 +26,4 @@ document.querySelectorAll('img, p:first-of-type').forEach(function (el) {
     });
 });
 
+
