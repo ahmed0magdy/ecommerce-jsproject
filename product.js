@@ -25,7 +25,7 @@ const product = [
         name: 'The ast Of Us 2',
         price: "400 EGP",
         img: "images/hp.jpg",
-        quantity:1,
+        quantity:0,
         add: " add to cart",
         brand: "lap",
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates neque amet quos sit obcaecati dolorem molestiae consectetur fuga, voluptas perferendis blanditiis iusto officia beatae iure vel veniam voluptatem assumenda veritatis, eum rerum saepe tempore pariatur ea! Suscipit nisi impedit expedita, soluta asperiores sapiente aperiam officia veniam iste doloribus sunt vitae.",

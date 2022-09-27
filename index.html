@@ -76,18 +76,15 @@
 	</section>
 	<section class="filter-condition">
 		<span>Sort by</span>
-		<select name="" id="select">
-			<option value="Default">Featured</option>
-			<option value="LowToHigh">Low to high</option>
-			<option value="HighToLow">High to low</option>
-		</select>
+		<button data-filter="ascs" class="pl-5 pr-5 mt-3 sortbyasc btn-danger">Sorting by name</button>
+		<button data-filter="prices" class="pl-5 pr-5 mt-3 prices btn-danger">Sorting by price</button>
 	</section>
 
 
 	<main>
 		<div class="slide-container">
 			<section class="container">
-				<div class="row" id="train">
+				<div class="row bb" id="train">
 
 				</div>
 			</section>
@@ -104,5 +101,7 @@
 <script src="main.js"></script>
 <script src="filter.js"></script>
 <script src="addcart.js"></script>
+<script src="sort.js"></script>
+
 
 </html>

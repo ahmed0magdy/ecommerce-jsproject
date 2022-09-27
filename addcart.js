@@ -39,15 +39,20 @@ function setItems(product){
                 ...cartItems,
                 [product.name]:product
             }
+            
         }
         cartItems[product.name].quantity += 1;
+        alert("the quantity of the product " +JSON.stringify(product.name) +" " + "is " + cartItems[product.name].quantity)
     }else{
         product.quantity = 1;
         cartItems ={
            [product.name] : product
        }
+       alert("the quantity of the product " +JSON.stringify(product.name) +" " + "is " + cartItems[product.name].quantity)
+
     }
    
     localStorage.setItem("productsInCart",JSON.stringify(cartItems))
 }
+
 onLoadCart();
