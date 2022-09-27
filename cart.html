@@ -29,16 +29,16 @@
 
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="index.html">products<span class="sr-only">(current)</span></a>
 					  </li>
-
-					<li class="nav-item">
+					  <li class="nav-item">
 						<a style="color:white;" class="cart nav-link" href="cart.html">Cart <span>0</span></a>
 					</li>
 
 					<li class="nav-item">
 						<a style="color:white;" class="nav-link" href="aboutus.html">About Us</a>
 					</li>
+
 
 					<li class="nav-item">
 						<a style="color:white;" class="nav-link" href="team.html" tabindex="-1" aria-disabled="true">Our
@@ -47,56 +47,31 @@
 					<li class="nav-item">
 						<a style="color:white;" class="nav-link" href="contact.html">Contact</a>
 					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-						  Account <i class="fa fa-user"></i>
-						</a>
-						<div class="dropdown-menu">
-				  <a class="dropdown-item" href="signup.html">Register</a>
-						  <a class="dropdown-item" href="sign-in.html">Login</a>
-						</div>
-					  </li>
 				</ul>
 			</div>
 		</nav>
-
-	</section>
-
-	<section class="filterbox">
-		<a href="#" class="btn active" data-filter="all">All</a>
-		<a href="#" class="btn active" data-filter="pc">pc</a>
-		<a href="#" class="btn active" data-filter="lap">laptop</a>
-		<a href="#" class="btn active" data-filter="mobile">mobile</a>
-	</section>
-	<section class="filter-condition">
-		<span>Sort by</span>
-		<select name="" id="select">
-			<option value="Default">Featured</option>
-			<option value="LowToHigh">Low to high</option>
-			<option value="HighToLow">High to low</option>
-		</select>
-	</section>
-
-
-	<main>
-		<div class="slide-container">
-			<section class="container">
-				<div class="row" id="train">
-
-				</div>
-			</section>
-		</div>
-	</main>
-
-
-	<footer class="container-fluid mt-5 text-center">
-		<h5>Copyright &copy; Ecommerce Website 2021</h5>
-	</footer>
-
-</body>
-<script src="product.js"></script>
-<script src="main.js"></script>
-<script src="filter.js"></script>
-<script src="addcart.js"></script>
-
-</html>
+        <div class="container-products">
+            <div class="product-header">
+                <h5 class="product-title">PRODUCT</h5>
+                <h5 class="price sm-hide">PRICE</h5>
+                <h5 class="quantity">QUANTITY</h5>
+                <h5 class="total">TOTAL</h5>
+            </div>
+            <div class="products">
+    
+            </div>
+        </div>
+    
+ 
+        
+        
+        
+        <footer class="container-fluid mt-5 text-center">
+            <h5>Copyright &copy; Ecommerce Website 2021</h5>
+        </footer>
+        
+    </body>
+    <script src="product.js"></script>
+    <script src="addcart.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    </html>
