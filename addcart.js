@@ -129,46 +129,46 @@ function manageQuantity() {
             }
         });
 
-    //     increaseButtons[i].addEventListener('click', () => {
-    //         console.log(cartItems);
-    //         currentQuantity = increaseButtons[i].parentElement.querySelector('span').textContent;
-    //         console.log(currentQuantity);
-    //         currentProduct = increaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
-    //         console.log(currentProduct);
+        increaseButtons[i].addEventListener('click', () => {
+            console.log(cartItems);
+            currentQuantity = increaseButtons[i].parentElement.querySelector('span').textContent;
+            console.log(currentQuantity);
+            currentProduct = increaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+            console.log(currentProduct);
 
-    //         cartItems[currentProduct].quantity += 1;
-    //         cartNumbers(cartItems[currentProduct]);
-    //         totalCost(cartItems[currentProduct]);
-    //         localStorage.setItem('productsInCart', JSON.stringify(cartItems));
-    //         displayCart();
-    //     });
+            cartItems[currentProduct].quantity += 1;
+            cartNumbers(cartItems[currentProduct]);
+            totalCost(cartItems[currentProduct]);
+            localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+            displayCart();
+        });
      }
 }
 
-// function deleteButtons() {
-//     let deleteButtons = document.querySelectorAll('.product ion-icon');
-//     let productNumbers = localStorage.getItem('cartNumbers');
-//     let cartCost = localStorage.getItem("totalCost");
-//     let cartItems = localStorage.getItem('productsInCart');
-//     cartItems = JSON.parse(cartItems);
-//     let productName;
-//     console.log(cartItems);
+function deleteButtons() {
+    let deleteButtons = document.querySelectorAll('.product ion-icon');
+    let productNumbers = localStorage.getItem('cartNumbers');
+    let cartCost = localStorage.getItem("totalCost");
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+    let productName;
+    console.log(cartItems);
 
-//     for(let i=0; i < deleteButtons.length; i++) {
-//         deleteButtons[i].addEventListener('click', () => {
-//             productName = deleteButtons[i].parentElement.textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+    for(let i=0; i < deleteButtons.length; i++) {
+        deleteButtons[i].addEventListener('click', () => {
+            productName = deleteButtons[i].parentElement.textContent.toLocaleLowerCase().replace(/ /g,'').trim();
            
-//             localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].quantity);
-//             localStorage.setItem('totalCost', cartCost - ( cartItems[productName].price * cartItems[productName].quantity));
+            localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].quantity);
+            localStorage.setItem('totalCost', cartCost - ( cartItems[productName].price * cartItems[productName].quantity));
 
-//             delete cartItems[productName];
-//             localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+            delete cartItems[productName];
+            localStorage.setItem('productsInCart', JSON.stringify(cartItems));
 
-//             displayCart();
-//             onLoadCartNumbers();
-//         })
-//     }
-// }
+            displayCart();
+            onLoadCartNumbers();
+        })
+    }
+}
 
 onLoadCart();
 displayCart();
