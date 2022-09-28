@@ -5,7 +5,7 @@ var result = '';
 function displayProducts() {
     product.forEach(function (e) {
 
-        result += '<div id=" ' + e.id + '" class="text-center col-md-4 store-product ' + e.brand + ' ">' + '<img style="cursor:pointer" id=" ' + e.id + '" src="' + e.img + '">' + '<p id=" ' + e.id + '">' + e.name + '</p> EGP ' + e.price + "<br><br>" + '<p> Brand :' + e.brand + "</p>"  + '<button class="addProduct btn-primary">' + e.add + '</button>' + '</div>'
+        result += '<div id=" ' + e.id + '" class="text-center col-md-4 store-product ' + e.brand + ' ">' + '<img style="cursor:pointer" id=" ' + e.id + '" src="' + e.img + '">' + '<p style="cursor:pointer" id=" ' + e.id + '">' + e.name + '</p> EGP ' + e.price + "<br><br>" + '<p> Brand :' + e.brand + "</p>"  + '<button class="addProduct btn-primary">' + e.add + '</button>' + '</div>'
 
     });
 
