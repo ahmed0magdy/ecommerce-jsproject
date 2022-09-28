@@ -7,28 +7,40 @@ for (let i = 0;i<addCart.length;i++){
     })
 }
 function onLoadCart(){
-    let productNum = localStorage.getItem("cartnumber");
+    let productNum = localStorage.getItem("CartNumber");
     if([productNum]){
         document.querySelector(".cart span").textContent = productNum;
 
     }
 
 }
-function CartNumber(product){
+function CartNumber(product, action){
     // console.log("the product is ",product) // to appear product clicked in console
-    let productNum = localStorage.getItem("cartnumber");
+    let productNum = localStorage.getItem("CartNumber");
     productNum =  parseInt(productNum);
-    if(productNum){
-        localStorage.setItem("cartnumber", productNum +1);
+
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+
+    if( action ) {
+        localStorage.setItem("CartNumber", productNum - 1);
+        document.querySelector('.cart span').textContent = productNum - 1;
+        console.log("action running");
+    } else if(productNum){
+        localStorage.setItem("CartNumber", productNum +1);
         document.querySelector(".cart span").textContent = productNum + 1;
     }else{
-        localStorage.setItem("cartnumber", 1);
+        localStorage.setItem("CartNumber", 1);
         document.querySelector(".cart span").textContent = 1;
 
     }
     setItems(product);
 }
+
 function setItems(product){
+    let productNum = localStorage.getItem("CartNumber");
+    productNum = parseInt(productNum);
+
     var cartItems = localStorage.getItem("productsInCart");
     cartItems = JSON.parse(cartItems)
     // console.log("my cart items are : " , cartItems); //display clicked item
@@ -132,7 +144,7 @@ function manageQuantity() {
             console.log(cartItems);
             currentQuantity = increaseButtons[i].parentElement.querySelector('span').textContent;
             console.log(currentQuantity);
-            currentProduct = increaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent
+            currentProduct = increaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent;
             console.log(currentProduct);
 
             cartItems[currentProduct].quantity += 1;
@@ -146,9 +158,9 @@ function manageQuantity() {
 
 function deleteButtons() {
     let deleteButtons = document.querySelectorAll('.product ion-icon');
-    let productNumbers = localStorage.getItem('cartnumber');
+    let productNum = localStorage.getItem("CartNumber");
     let cartCost = localStorage.getItem("totalCost");
-    let cartItems = localStorage.getItem('productsInCart');
+    let cartItems = localStorage.getItem("productsInCart");
     cartItems = JSON.parse(cartItems);
     let productName;
     console.log(cartItems);
@@ -157,7 +169,7 @@ function deleteButtons() {
         deleteButtons[i].addEventListener('click', () => {
             productName = deleteButtons[i].parentElement.textContent.trim();
            
-            localStorage.setItem('cartnumber', productNumbers - cartItems[productName].quantity);
+            localStorage.setItem('CartNumber', productNum - cartItems[productName].quantity);
             localStorage.setItem('totalCost', cartCost - ( cartItems[productName].price * cartItems[productName].quantity));
 
             delete cartItems[productName];
