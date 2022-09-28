@@ -8,7 +8,7 @@ for (let i = 0;i<addCart.length;i++){
 }
 function onLoadCart(){
     let productNum = localStorage.getItem("CartNumber");
-    if([productNum]){
+    if(productNum){
         document.querySelector(".cart span").textContent = productNum;
 
     }
@@ -163,7 +163,6 @@ function deleteButtons() {
     let cartItems = localStorage.getItem("productsInCart");
     cartItems = JSON.parse(cartItems);
     let productName;
-    console.log(cartItems);
 
     for(let i=0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener('click', () => {
@@ -176,11 +175,11 @@ function deleteButtons() {
             localStorage.setItem('productsInCart', JSON.stringify(cartItems));
 
             displayCart();
-            onLoadCart();
+            // onLoadCart();
         })
     }
 }
 
-onLoadCart();
+// onLoadCart();
 displayCart();
 
