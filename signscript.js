@@ -128,7 +128,7 @@ function check(event){
                         // alert('You are logged in..');
                         var username = objData[i].firstName;
                         sessionStorage.username=username; // set user session
-                        window.location.href = 'home.html'; 
+                        window.location.href = 'index.html'; 
                  
                    
                 }
@@ -172,7 +172,7 @@ function auth()
 {
     if (sessionStorage.username)
     {
-        window.location.href = 'home.html';
+        window.location.href = 'index.html';
 
     }
 }
@@ -183,7 +183,7 @@ function msg()
     alert('Thank You , Your Message Sent Successfully');
     if (sessionStorage.username)
     {
-        location.assign('home.html');
+        location.assign('index.html');
     }
     else
     {
