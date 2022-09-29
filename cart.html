@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Online Ecommerce Website</title>
+	<meta charset="utf-8" />
+	<meta name="viewpoint" content="width=device-width,initial-scal=1.0">
+	<meta http-equip="X-UA-compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<!-- onload="myuser()" -->
+
+	<section id="nav-bar">
+		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: green;">
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="pull-right">
+				<a style="color:white; font-size: 30px;" href="index.html">Ecommerce Website</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarNav">
+
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+					</li>
+
+					<li class="nav-item">
+						<a style="color:white;" class="cart nav-link" href="cart.html">Cart <span>0</span></a>
+
+					</li>
+
+
+					<li class="nav-item">
+						<a style="color:white;" class="nav-link" href="aboutus.html">About Us</a>
+					</li>
+
+
+					<li class="nav-item">
+						<a style="color:white;" class="nav-link" href="team.html" tabindex="-1" aria-disabled="true">Our
+							Team</a>
+					</li>
+					<li class="nav-item">
+						<a style="color:white;" class="nav-link" href="contact.html">Contact</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+							aria-expanded="false">
+							Account <i class="fa fa-user"></i>
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="signup.html">Register</a>
+							<a class="dropdown-item" href="sign-in.html">Login</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+	</section>
+
+	<!-- Start Cart  -->
+	<div id="site">
+		<div class="container-products">
+			<header id="masthead">
+				<h2>CART</h2>
+			</header>
+			<table class="shopping-cart">
+				<thead>
+					<tr>
+						<th scope="col">Product</th>
+						<th scope="col">Price</th>
+						<th scope="col">QUANTITY</th>
+						<th scope="col" colspan="2">Total</th>
+					</tr>
+				</thead>
+				<tbody>
+					<div class="products">
+
+					</div>
+				</tbody>
+			</table>
+
+			<!-- <div class="product-header">
+			<h5 class="product-title">PRODUCT</h5>
+			<h5 class="price sm-hide">PRICE</h5>
+			<h5 class="quantity">QUANTITY</h5>
+			<h5 class="total">TOTAL</h5>
+		</div> -->
+
+			<div class="products">
+
+			</div>
+
+		</div>
+		<ul id="shopping-cart-actions">
+			<li>
+				<a href="index.html" class="btn-checkout">Continue Shopping</a>
+			</li>
+			<li>
+				<a href="checkout.html" class="btn-checkout">Go To Checkout</a>
+			</li>
+		</ul>
+	</div>
+
+<!-- End Cart  -->
+
+
+
+	<!-- Start Footer  -->
+	<footer id="footer">
+		<div class="container-fluid clear">
+			<div class=" row">
+				<div class=" footer_links">
+					<!-- contact us -->
+					<div class="col-sm-3 col_footer footer_padding">
+						<div class="footer-inner-matter">
+							<h3 class="wow fadeInUp">Contact Us</h3>
+							<ul>
+								<li><img src="image/icon-phone.png">
+									<p>Hotline Free 24/24:</p><span><i class="fa fa-volume-control-phone"></i>(+800) 123
+										456 789</span>
+								</li>
+								<li><i class="fa fa-map-marker"></i> 622 Vernon Drive Flushing, NY 11354</li>
+								<li class="email"><i class="fa fa-envelope"></i> company123@gmail.com</li>
+							</ul>
+							<div class="social_media_wrapper">
+								<ul>
+									<li class="facebook"><a href=""><i class="fa fa-facebook-square"></i></a></li>
+									<li class="skype"><a href=""><i class="fa fa-skype"></i></a></li>
+									<li class="youtube"><a href=""><i class="fa fa-youtube-square"></i></a></li>
+									<li class="google"><a href=""><i class="fa fa-google-plus-square"></i></a></li>
+									<li class="linkedin"><a href=""><i class="fa fa-linkedin-square"></i></a></li>
+								</ul>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<!---------/ end cntact us--------->
+					<!-- information -->
+					<div class="col-sm-3 col_footer footer_padding">
+						<div class="footer-inner-matter">
+							<h3 class="wow fadeInUp">Information</h3>
+							<ul class="list-unstyled">
+								<li><a href="about.html" class="wow fadeInUp"> About Us</a></li>
+								<li><a href="#" class="wow fadeInUp"> Delivery Information</a></li>
+								<li><a href="#" class="wow fadeInUp"> Privacy Policy</a></li>
+								<li><a href="#" class="wow fadeInUp"> Terms &amp; Conditions</a></li>
+							</ul>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<!-- / information end-->
+					<!-- extra -->
+					<div class="col-sm-3 col_footer footer_padding">
+						<div class="footer-inner-matter">
+							<h3 class="wow fadeInUp">Extras</h3>
+							<ul class="list-unstyled">
+								<li><a href="contact.html" class="wow fadeInUp"> Contact Us</a></li>
+								<li><a href="brands.html" class="wow fadeInUp"> Brands</a></li>
+								<li><a href="index.html" class="wow fadeInUp"> Specials</a></li>
+								<li><a href="return.html" class="wow fadeInUp"> Returns</a></li>
+								<li><a href="#" class="wow fadeInUp"> Gift Certificates</a></li>
+								<li><a href="#" class="wow fadeInUp"> Affiliate</a></li>
+								<li><a href="sitemap.html" class="wow fadeInUp"> Site Map</a></li>
+							</ul>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<!-- / extra end-->
+					<!-- play_store -->
+					<div class="col-sm-3 col_footer footer_padding Get_the_App">
+						<div class="footer-inner-matter">
+							<h3 class="wow fadeInUp">
+								<!--{{ text_extra }}--->Get The App
+							</h3>
+							<h4>GreenLife App Is Now Available On Google
+								Play &amp; App Store. Get It Now.
+							</h4>
+							<div class="images_dat_dec">
+								<div class="img_1">
+									<a href="#"><img src="image/icon1-app.jpg"></a>
+								</div>
+								<div class="img_2">
+									<a href="#"><img src="image/icon-app.jpg"></a>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<!-- / play_store end -->
+					<!-- newsletters -->
+					<div class="new_bottom_newsletter">
+						<div class="col-sm-12 col_footer">
+							<div class="head_newsletter text-center">
+								<div class="head_newsletter_one">
+									<div class="footer-inner-matter news_letter_subscription wow fadeInUp">
+										<div id="newsletterModule-footer" class="">
+											<div id="newsletterFooterModule0">
+												<div class="news_latter" id="news_latter">
+													<div class="">
+														<div class="row" id="subsribe">
+															<div class="successmsg">
+															</div>
+															<div class="news_latte_text">
+																<div class="col-sm-4 text-left">
+																	<h3>Join Our<span> Newsletter Now</span></h3>
+																</div>
+																<div class="col-sm-3 newletter_desc text-left">
+																	<p>Join 10.000+ subscribers and get a new discount
+																		coupon.</p>
+																</div>
+																<!-- <p>Subscribe to our newsletter to receive special offers and latest news. </p> -->
+																<div class="col-sm-5">
+																	<div class="form-group required text-right">
+																		<div class="news_latter_form">
+																			<div class="input-news">
+																				<input type="text"
+																					id="input-newsletter-email"
+																					class="fem form-control"
+																					placeholder="Enter Your Email Address here"
+																					value="" name="email" />
+																			</div>
+																			<div class="subscribe-btn input-group-btn">
+																				<a id="button-subsribe"
+																					class="btn btn-primary btn-xs">Subscribe</a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"> </div>
+					<!--- copy-right-area -->
+					<div class=" social_footer copy_right_wrapper">
+						<div class="col-sm-6 rtl_text">
+							<div class="copy-right">
+								<p class="wow fadeInDown  animated"
+									style="visibility: visible; animation-name: fadeInDown;">© Copyright 2022 by
+									E-store. All right Reserved - Design By <a href="#" target="_blank">Group 5</a></p>
+							</div>
+						</div>
+						<!-------/ end copyright----------->
+						<!--- payment_links -->
+						<div class="col-sm-6 rtl_text">
+							<div class="payment_method_footer">
+								<div class="payment_option_methods">
+									<ul>
+										<li><a href=""><img src="image/payment-1.png"></a></li>
+										<li><a href=""><img src="image/payment-2.png"></a></li>
+										<li><a href=""><img src="image/payment-3.png"></a></li>
+										<li><a href=""><img src="image/payment-4.png"></a></li>
+										<li><a href=""><img src="image/payment-5.png"></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="clear"> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</footer>
+<!--------END FOOTER------------>
+</body>
+<script src="product.js"></script>
+<script src="addcart.js"></script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</html>
