@@ -13,7 +13,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body onload="myuser()">
 
 	<section id="nav-bar">
 		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: green;">
@@ -46,11 +46,12 @@
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-						  Account <i class="fa fa-user"></i>
+							<h5 id="user"></h5> <i class="fa fa-user"></i>
 						</a>
 						<div class="dropdown-menu">
-				  <a class="dropdown-item" href="signup.html">Register</a>
-						  <a class="dropdown-item" href="sign-in.html">Login</a>
+				  <a class="dropdown-item" id="register" href="signup.html">Register</a>
+				 <a class="dropdown-item" id="login" href="sign-in.html">Login</a>
+				 <a class="dropdown-item" id="logout" href="#" onclick="logout()">Logout</a>
 						</div>
 					  </li>
 				</ul>
@@ -84,6 +85,7 @@
 
 </body>
 <script src="product.js"></script>
+<script src="signscript.js"></script>
 <script src="main.js"></script>
 <script src="filter.js"></script>
 <script src="addcart.js"></script>

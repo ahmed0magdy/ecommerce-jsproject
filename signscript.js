@@ -11,6 +11,8 @@ function store(event)
         var lastName = document.getElementById('Lname');
         var mail = document.getElementById('mail');
         var password = document.getElementById('pass');
+        var confirmpass = document.getElementById('conpass');
+
         var validemail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
         // var validpass =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm;
         //sign up validation
@@ -54,10 +56,22 @@ function store(event)
             var objData = JSON.parse(Datastring) || [];
             if(objData.length == 0)
             {
-                dataarr.push(data);
-                // console.log(dataarr);
-                localStorage.setItem('data',JSON.stringify(dataarr));
-                alert('Your account has been created Successfully!!');
+                //confirm password
+                if(password.value == confirmpass.value)
+                {
+                    dataarr.push(data);
+                    localStorage.setItem('data',JSON.stringify(dataarr));
+                    alert('Your account has been created Successfully!!');
+                    window.location.href = 'sign-in.html';
+
+                }
+                else 
+                {
+                    msgerror.style.display='block';
+                   msgerror.textContent = 'password not match!!';
+    
+                }
+                
 
             }
             else
@@ -75,12 +89,21 @@ function store(event)
             
                 if(!exist)
                 {
-                        dataarr.push(data);
-                        // console.log(dataarr);
-                        localStorage.setItem('data',JSON.stringify(dataarr));
-                        alert('Your account has been created Successfully!!');
-                        // window.location.href = 'sign-in.html';
-                        location.assign('sign-in.html');
+                       //confirm password
+                        if(password.value == confirmpass.value)
+                        {
+                            dataarr.push(data);
+                            localStorage.setItem('data',JSON.stringify(dataarr));
+                            alert('Your account has been created Successfully!!');
+                            window.location.href = 'sign-in.html';
+
+                        }
+                        else 
+                        {
+                            msgerror.style.display='block';
+                            msgerror.textContent = 'password not match!!';
+            
+                        }
 
                 }
             } 
@@ -127,7 +150,10 @@ function check(event){
                        
                         // alert('You are logged in..');
                         var username = objData[i].firstName;
-                        sessionStorage.username=username; // set user session
+                        var mail = objData[i].mail;
+                        // set user session
+                        sessionStorage.username=username;
+                        sessionStorage.email=mail; 
                         window.location.href = 'index.html'; 
                  
                    
@@ -148,15 +174,28 @@ function check(event){
 // get user session
 function myuser()
 {
+    var regist = document.getElementById('register');
+    var login = document.getElementById('login');
+    var logout = document.getElementById('logout');
+
+    regist.style.display='none';
+    login.style.display='none';
+    logout.style.display='none';
+
+
     var usercon= document.getElementById('user');
     if (sessionStorage.username)
     {
         usercon.textContent = sessionStorage.username;
+        logout.style.display='block';
+
 
     }
     else 
     {
-        window.location.href = 'index.html';
+        usercon.textContent = 'not signed user';
+        regist.style.display='block';
+        login.style.display='block';
 
     }
 }
@@ -165,7 +204,9 @@ function myuser()
 function logout()
 {
     sessionStorage.removeItem('username');
-    window.location.href = 'index.html';
+    sessionStorage.removeItem('email');
+    myuser()
+    //window.location.href = 'index.html';
 
 }
 function auth()
@@ -196,7 +237,7 @@ function msg()
 
 function Showpswd()
 {
-    var myPass = document.getElementById('pass'),
+    var myPass = document.getElementById('upass'),
     myEye  = document.getElementById('eye');
     myEye.onclick = function() {
      'use strict';

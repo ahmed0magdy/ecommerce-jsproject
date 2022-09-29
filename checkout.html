@@ -61,72 +61,65 @@
 
         <div id="site">
             
-            <div id="content">
+            < id="content">
                     <h1>Checkout</h1>
                     
+                    <div class="container-products">
+                      <div class="product-header">
+                          <h5 class="product-title">PRODUCT</h5>
+                          <h5 class="price sm-hide">PRICE</h5>
+                          <h5 class="quantity">QUANTITY</h5>
+                          <h5 class="total">TOTAL</h5>
+                      </div>
                       <div class="products">
               
                       </div>
                   </div>
-                        <table id="checkout-cart" class="shopping-cart">
-                            <thead>
-                                <tr>
-                                    <th id="itemsNames" cope="col">Product</th>
-                                    <th id="itemsPrice"scope="col">Price</th>
-                                    <th id="itemsQuantity"scope="col">Quantity</th>
-                                    <th id="itemsTotal"scope="col"> Cart total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                      
-                            </tbody>
-                        </table>
-                 <div id="pricing">
-                    <p id="sub-total">
-                        <strong>Total of cart</strong>: <span id="sumOfTotal"></span>
-                    </p>
-                 </div>
                  
-                    <form action="order.html" method="post" id="checkout-order-form" style="background-color: skyblue">
-                        <h2>Your Details</h2>
-                        <!-- <div>
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name" data-type="string" data-message="This field cannot be empty" readonly />
-                        </div>
-                        <div>
-                            <label for="email">Email</label>
-                            <input type="text" name="email" id="email" data-type="expression" data-message="Not a valid email address" readonly/>
-                        </div> -->
-                        <div>
-                            <label for="address">Address</label>
-                            <input type="text" name="address" id="address" data-type="string" data-message="This field cannot be empty" autofocus />
-                        </div>
-                        <div>
-                            <label for="street">street</label>
-                            <input type="text" name="street" id="street" data-type="string" data-message="This field cannot be empty" />
-                        </div>
-                        <div>
-                            <label for="landmark">landmark</label>
-                            <input type="text" name="landmark" id="landmark" data-type="string" data-message="This field cannot be empty" />
-                        </div>
-                        <div>
-                            <label for="City">Location</label>
-                            <select name="city" id="city" data-type="string" data-message="This field cannot be empty">
-                                <option value="">Cairo</option>
-                                <option value="De">Alexandria</option>
-                                <option value="IN">Mansoura</option>
-                                <option value="IN">Aswan</option>
-                                <option value="IN">Portsaid</option>
-                            </select>
-                        </div>
-                        <br>
-                    </form>
+                 
+                  <form action="order.html" method="post" id="checkout-order-form" style="background-color: skyblue">
+                    <h2>Your Details</h2>
+                    <div> 
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" data-type="string" data-message="This field cannot be empty" readonly />
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" data-type="expression" data-message="Not a valid email address" readonly/>
+                    </div> 
+                    <div>
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address" data-type="string" data-message="This field cannot be empty" autofocus />
+                    </div>
+                    <div>
+                        <label for="street">street</label>
+                        <input type="text" name="street" id="street" data-type="string" data-message="This field cannot be empty" />
+                    </div>
+                    <div>
+                        <label for="landmark">landmark</label>
+                        <input type="text" name="landmark" id="landmark" data-type="string" data-message="This field cannot be empty" />
+                    </div>
+                    <div>
+                        <label for="City">Location</label>
+                        <select name="city" id="city" data-type="string" data-message="This field cannot be empty">
+                            <option value="">Cairo</option>
+                            <option value="De">Alexandria</option>
+                            <option value="IN">Mansoura</option>
+                            <option value="IN">Aswan</option>
+                            <option value="IN">Portsaid</option>
+                        </select>
+                    </div>
+                    <br>
+                </form>
+                        
+                    
                     
 
                     <div class="buttons">
-                        <input type="submit" id="submit-order" value="Submit" class="btn btn-success" /> 
-                        <a href="cart.html">
-                            <button class="btn btn-success">Back to cart</button>
+                      <form id="myForm" >
+                        <input type="submit" id="submit-order" value="Submit" disabled="disabled"  class="btn-checkout btn-success" onsubmit="submission()"/>
+                        </form> <a href="cart.html">
+                            <button class="btn-checkout btn-success">Back to cart</button>
                       </a>
                     </div>
             </div>
