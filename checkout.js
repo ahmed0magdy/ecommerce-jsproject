@@ -66,17 +66,6 @@ let cartItems = localStorage.getItem('productsInCart');
 //     }
 
 
-//     if (address){
-//         fetch('/order', {
-//             method: 'post',
-//             headers: new Headers({'content-type': 'application/json'}),
-//             body:JSON.stringify({
-//                 order:JSON.parse(sessionStorage.cart),
-//                 email: JSON.parse(sessionStorage.user).email,
-//                 add:address,
-//             })
-//         }).then(res => res.json())
-//         .then(data =>{
             
 //             if (data.alret == 'Your order is placed'){
 //                 showAlert(data.alert, 'success');
