@@ -96,20 +96,20 @@ function displayCart() {
             `<div class="product"><ion-icon name="close-circle"></ion-icon><img src="${item.img}" />
                 <span class="sm-hide">${item.name}</span>
             </div>
-            <div class="price sm-hide">EGP ${item.price},00</div>
+            <div class="price sm-hide">$ ${item.price},00</div>
             <div class="quantity">
                 <ion-icon class="decrease" name="arrow-dropleft-circle"></ion-icon>
                     <span>${item.quantity}</span>
                 <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
             </div>
-            <div class="total">EGP ${item.quantity * item.price},00</div>`;
+            <div class="total">$ ${item.quantity * item.price},00</div>`;
         });
 
         productContainer.innerHTML += `
-            <div class="basketTotalContainer">
-                <h4 class="basketTotalTitle">Basket Total</h4>
-                <h4 class="basketTotal">EGP ${cartCost},00</h4>
-            </div>`
+        <div class="basketTotalContainer">
+            <h4 class="basketTotalTitle">Basket Total</h4>
+            <h4 class="basketTotal">$ ${cartCost},00</h4>
+        </div>`
 
         deleteButtons();
         manageQuantity();

@@ -1,5 +1,5 @@
-// for sign up and storing data 
-var dataarr = JSON.parse(localStorage.getItem('data')) || [];
+ // for sign up and storing data 
+ var dataarr = JSON.parse(localStorage.getItem('data')) || [];
 
 
 var msgerror = document.getElementById('error');
@@ -257,14 +257,16 @@ function Showpswd()
     myEye  = document.getElementById('eye');
     myEye.onclick = function() {
      'use strict';
-     if (this.className === 'fas fa-eye-slash') {
+     if (this.className === 'fa fa-eye-slash') {
          myPass.setAttribute('type', 'text');
-         this.setAttribute('class', 'fas fa-eye');
+         this.setAttribute('class', 'fa fa-eye');
          this.setAttribute('style', 'color:#0cca83');
      } else {
          myPass.setAttribute('type', 'password');
-         this.setAttribute('class', 'fas fa-eye-slash');
+         this.setAttribute('class', 'fa fa-eye-slash');
          this.setAttribute('style', 'color:#D91B1B');
      }
  };
 }
+
+

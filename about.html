@@ -62,7 +62,7 @@ $('#window').hide();
 		<div class="col-sm-8">
 			<div class="text_account_wrapper pull-right">
 				<div class="header_transaction header_account">
-					<a href="#" title="My Account" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-o faicons"></i> <span class="hidden-xs hidden-sm hidden-md"id="user">account</span> <span class="caret"></span></a>
+					<a href="#" title="My Account" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-o faicons"></i> <span class="hidden-xs hidden-sm hidden-md"id="user"></span> <span class="caret"></span></a>
 					<ul class="dropdown-menu dropdown-menu-right megamenu">
 						<li><a href="register.html" id="register">Register</a>
 						</li>
@@ -79,7 +79,7 @@ $('#window').hide();
 				<!-- cart -->
 				<div class="header_transaction heder_cart">
 					<div id="cart" class="btn-group btn-block">
-						<a style="color:rgb(0, 106, 106)" href="cart.html" class="cart"><button type="button" class="btn btn-inverse btn-block btn-lg dropdown-toggle"></i> My Cart <span class="cart_qut">0</span> </button></a>
+						<a style="color:rgb(0, 106, 106)" href="cart.html" class="cart"><button type="button" class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i class="fa fa-shopping-cart faicons"></i> My Cart <span class="cart_qut">0</span> </button></a>
 					</div>
 				</div>
 			</div>
@@ -114,25 +114,43 @@ $('#window').hide();
 </div>
 </div>
 </div>
-</header>
-<!-----start first-section---> 
+<!--menu end-->
+<script>
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 211){
+    $('header .header_menu').addClass("sticky_header");
+  } else{
+    $('header .header_menu').removeClass("sticky_header");
+  }
+});
+</script>
+<!---------catagory-banner-------->
 <div class="main_breadcrumb">
- 	    <div class="container-fluid">
-	 	       <div class="row">
-			         <ul class="breadcrumb">
-					           <h3>Details</h3>
-								    <li><a href="index.html">Home</a></li>
-								    <li><a href="product-header.html">Details page</a></li>
-							  </ul>
-	         </div>
-      </div>                
+	<div class="container">
+	 <ul class="breadcrumb">
+	    <h3>About Us</h3>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+			  </ul>
+	</div>
 </div>
- <!---- second section--->
-<div class="product-product" id="details">
-
+<!---- /end ----->
+<div class="main_padding">
+<div id="information-information" class="container-fluid">
+  <div class="row">
+  	<!---------abuot us content------>
+                <div id="content" class="col-sm-12">
+      <h1>About Us</h1>
+      <p>
+	we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted.</p>
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+	<p>we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted.</p>
+	<p>we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish.</p>
 </div>
-		
-<!---------footer area----------->
+    </div>
+    <!------ /end ----->
+</div></div>
+<!-----footer area-------->
 <footer id="footer">
 	<div class="container-fluid clear">
 	<div class=" row">
@@ -283,15 +301,33 @@ $('#window').hide();
 	</div>
 	<!--------/ end payment link------------>
 	</footer>
-<!--- /end footer------->
- <div class="top_button">
-    <a class="back-to-top" style="cursor:pointer;" id="top-scrolltop"><i class="fa fa-angle-up"></i></a>                
-</div>
 
+<div class="top_button">
+  <a class="back-to-top" style="cursor:pointer;" id="top-scrolltop"><i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+$('#top-scrolltop').on('click',function(){
+ $('html, body').animate({scrollTop:0},500);
+});
+
+$(function ($) {
+    "use strict";
+    /*Back to top */
+	$(".back-to-top").addClass("hidden-top");
+		$(window).scroll(function () {
+		if ($(this).scrollTop() === 0) {
+			$(".back-to-top").addClass("hidden-top")
+		} else {
+			$(".back-to-top").removeClass("hidden-top")
+		}
+	});
+
+	$('.back-to-top').click(function () {
+		$('body,html').animate({scrollTop:0}, 1200);
+		return false;
+	});	
+});
+</script>
+<script src="script/signscript.js"></script>
 </body>
-<script src="script/product.js"></script>
-<script src="script/detail.js"></script>
-<script src="script/signscript.js"> </script>
-<script src="script/addcart.js"></script>
-<script src="script/script.js"></script>
-</html> 
+</html>

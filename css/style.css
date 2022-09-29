@@ -2,6 +2,20 @@
 {
 	clear:both;
 }
+/*auth*/
+#error
+{
+    color: rgb(171, 18, 18);
+    /* text-align: center; */
+    border: 1px solid rgb(220, 22, 22);
+    width: 300px;
+    /* margin: auto; */
+    margin-bottom: 5px;
+    border-radius: 15px;
+    height: 30px;
+    display: none;
+    padding: 5px;
+}
 /* blog */
 .eblog
 {

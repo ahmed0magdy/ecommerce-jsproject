@@ -35,7 +35,7 @@
 new WOW().init();
 </script>
 </head>
-<body onload="myuser()">
+<body onload="myuser();auth()">
 <!-- loader -->
 <div class="loader" id="window">
 <img src="image/preloader.gif" id="hourglass2" alt="hourglass" title="hourglass">
@@ -55,14 +55,14 @@ $('#window').hide();
 	<div class="row header_sec destop_header">
 		<div class="col-sm-4 rtl_logo">
 			<div id="logo">
-				<a href="index.html"><img src="image/logos.png" title="Your Store" alt="Your Store" class="img-responsive" /></a>
+				<a href="#"><img src="image/logos.png" title="Your Store" alt="Your Store" class="img-responsive" /></a>
 			</div>
 		</div>
 		<!-- my account -->
 		<div class="col-sm-8">
 			<div class="text_account_wrapper pull-right">
 				<div class="header_transaction header_account">
-					<a href="#" title="My Account" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-o faicons"></i> <span class="hidden-xs hidden-sm hidden-md"id="user">account</span> <span class="caret"></span></a>
+					<a href="#" title="My Account" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-o faicons"></i> <span class="hidden-xs hidden-sm hidden-md"id="user"></span> <span class="caret"></span></a>
 					<ul class="dropdown-menu dropdown-menu-right megamenu">
 						<li><a href="register.html" id="register">Register</a>
 						</li>
@@ -79,7 +79,7 @@ $('#window').hide();
 				<!-- cart -->
 				<div class="header_transaction heder_cart">
 					<div id="cart" class="btn-group btn-block">
-						<a style="color:rgb(0, 106, 106)" href="cart.html" class="cart"><button type="button" class="btn btn-inverse btn-block btn-lg dropdown-toggle"></i> My Cart <span class="cart_qut">0</span> </button></a>
+						<a style="color:rgb(0, 106, 106)" href="cart.html" class="cart"><button type="button" class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i class="fa fa-shopping-cart faicons"></i> My Cart <span class="cart_qut">0</span> </button></a>
 					</div>
 				</div>
 			</div>
@@ -114,25 +114,168 @@ $('#window').hide();
 </div>
 </div>
 </div>
-</header>
-<!-----start first-section---> 
+<!--menu end-->
+<script>
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 211){
+    $('header .header_menu').addClass("sticky_header");
+  } else{
+    $('header .header_menu').removeClass("sticky_header");
+  }
+});
+</script>
+<!---------catagory-banner-------->
 <div class="main_breadcrumb">
- 	    <div class="container-fluid">
-	 	       <div class="row">
-			         <ul class="breadcrumb">
-					           <h3>Details</h3>
-								    <li><a href="index.html">Home</a></li>
-								    <li><a href="product-header.html">Details page</a></li>
-							  </ul>
-	         </div>
-      </div>                
+	<div class="container">
+	 <ul class="breadcrumb">
+	 <h3>Account Login</h3>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="index.html">Account</a></li>
+				<li><a href="login.html">Login</a></li>
+			  </ul>
+	</div>
 </div>
- <!---- second section--->
-<div class="product-product" id="details">
+<!------ /end ---->
+<div class="main_padding">
+<div id="account-login" class="container-fluid">
+      <div class="row">
+                <div id="content" class="col-sm-9">
+      <div class="row">
+      	<!------ new custumers add ---------->
+        <div class="col-sm-6">
+          <div class="well">
+            <h2>New Customer</h2>
+            <p><strong>Register Account</strong></p>
+            <p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p>
+            <a href="register.html" class="btn btn-primary">Continue</a></div>
+        </div>
+        <!--- /end ---->
+        <!------custumers login and returning form---->
+        <div class="col-sm-6">
+          <div class="well">
+            <h2>Returning Customer</h2>
+            <p><strong>I am a returning customer</strong></p>
+			<h6 id="error"></h6>
 
+            <form >
+              <div class="form-group">
+                <label class="control-label" for="input-email">E-Mail Address</label>
+                <input type="text" name="email" value="" placeholder="E-Mail Address" id="input-email" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label class="control-label" for="input-password">Password</label>
+                <input type="password" name="password" value="" placeholder="Password" id="input-password" class="form-control" />
+				<i id="eye" class="fas fa-eye-slash" onclick="Showpswd()"></i>
+				<br><br>
+                <!-- <a href="#">Forgotten Password</a></div> -->
+				<button type="button" onclick='check(event)' class="btn btn-primary">Sign In</button>
+
+              <!-- <input type="submit" value="Login" class="btn btn-primary" /> -->
+             </form>
+          </div>
+        </div>
+      </div>
+      </div><!---- /end form --->
+      <!----wishlist page---->
+    <!-- <aside id="column-right" class="col-sm-3 hidden-xs">
+    <div class="list-group categories_wrapper_home">
+<h4>Account</h4>
+	<ul>
+	  	 <li> <a href="wish-list.html" class="list-group-item"> Login</a></li> <li><a href="register.html" class="list-group-item">  Register</a></li> <li><a href="#" class="list-group-item">  Forgotten Password</a></li>
+	  	  <li><a href="index.html" class="list-group-item">  My Account</a></li>
+	  	 <li> <a href="contact.html" class="list-group-item">  Address Book</a></li> <li><a href="wish-list.html" class="list-group-item">  Wish List</a></li> <li><a href="#" class="list-group-item">  Order History</a></li> <li><a href="#" class="list-group-item">  Downloads</a></li><li><a href="#" class="list-group-item">  Recurring payments</a></li> <li><a href="#" class="list-group-item">  Reward Points</a></li> <li><a href="return.html">  Returns</a></li> <li><a href="#" class="list-group-item">  Transactions</a></li> <li><a href="#" class="list-group-item">  Newsletter</a></li>
+	  	</ul>
 </div>
-		
-<!---------footer area----------->
+
+  </aside> -->
+</div><!---- /end --->
+</div></div>
+<style>
+	#newsletterModal .modal-body{
+		background-image:url('#');
+	}
+	
+</style>
+<!-- <div id="newsletterModal" class="modal fade newsletter_popup" role="dialog"  aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content swing">
+			<button type="button" class="close closepopup" data-dismiss="modal"><img src="image/close_news.png" alt="close_news" title="close_news"/></button>
+
+			<div class="modal-body">
+							
+				<h3>Sign Up For Our Newsletter:</h3>
+<p>Get All The Latest Information On Events,Sales And Offers.<br> Sign Up For Newsletter Today</p>
+				
+				<form class="subsribe">
+					<div class="successmsg"></div>
+											<div class="form-group required">
+														  <input type="text" id="input-newsletter-email" class="form-control" placeholder="E-Mail Address" value="" name="email"/>
+							  <div class="input-group">
+							  <span class="">
+								<a class="btn btn-primary button-subsribe">Subscribe</a>
+							  </span>
+							</div>-->
+						<!-- </div>
+				</form> -->
+			<!-- </div>
+		</div>
+	</div>
+</div> -->
+
+<script type="text/javascript">
+$('#newsletterModal .button-subsribe').on('click', function(){
+	$.ajax({
+		url: 'index.php?route=extension/awesomenewsletter_popup/addsubscribe',
+		type: 'post',
+		data: $('#newsletterModal .subsribe input[type=\'text\']'),
+		dataType: 'json',
+		beforeSend: function(){
+			$('#newsletterModal .button-subsribe').button('loading');
+		},
+		complete: function(){
+			$('#newsletterModal .button-subsribe').button('reset');
+		},
+		success: function(json){
+			$('.alert, .text-danger').remove();
+			$('.form-group').removeClass('has-error');
+			$('#newsletterModal .successmsg').html('');
+			
+			if(json['error']) {
+				for (i in json['error']) {
+					var element = $('#newsletterModal #input-newsletter-' + i.replace('_', '-'));
+
+					if ($(element).parent().hasClass('input-group')){
+						$(element).parent().after('<div class="text-danger">' + json['error'][i] + '</div>');
+					} else {
+						$(element).after('<div class="text-danger">' + json['error'][i] + '</div>');
+					}
+				}
+				
+				$('.text-danger').parent().addClass('has-error');
+			}
+			
+			if(json['success']) {
+				$('#newsletterModal .successmsg').html('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+				
+				$('#newsletterModal .subsribe input[type=\'text\']').val('');
+			}
+			
+			if(json['warring']) {
+				$('#newsletterModal .successmsg').html('<div class="alert alert-danger">' + json['warring'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+			}
+		}
+	});
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+	var time = parseInt(10*1000);
+	setTimeout(function(){
+		$('#newsletterModal').modal('show')  
+	}, time); 
+});
+</script>
+<!-----footer area-------->
 <footer id="footer">
 	<div class="container-fluid clear">
 	<div class=" row">
@@ -283,15 +426,39 @@ $('#window').hide();
 	</div>
 	<!--------/ end payment link------------>
 	</footer>
-<!--- /end footer------->
- <div class="top_button">
-    <a class="back-to-top" style="cursor:pointer;" id="top-scrolltop"><i class="fa fa-angle-up"></i></a>                
+
+
+<div class="top_button">
+  <a class="back-to-top" style="cursor:pointer;" id="top-scrolltop"><i class="fa fa-angle-up"></i></a>
 </div>
+<script>
+$('#top-scrolltop').on('click',function(){
+ $('html, body').animate({scrollTop:0},500);
+});
+
+$(function ($) {
+    "use strict";
+    /*Back to top */
+	$(".back-to-top").addClass("hidden-top");
+		$(window).scroll(function () {
+		if ($(this).scrollTop() === 0) {
+			$(".back-to-top").addClass("hidden-top")
+		} else {
+			$(".back-to-top").removeClass("hidden-top")
+		}
+	});
+
+	$('.back-to-top').click(function () {
+		$('body,html').animate({scrollTop:0}, 1200);
+		return false;
+	});	
+});
+</script>
+<!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+<script src="script/signscript.js"> </script>
 
 </body>
-<script src="script/product.js"></script>
-<script src="script/detail.js"></script>
-<script src="script/signscript.js"> </script>
-<script src="script/addcart.js"></script>
-<script src="script/script.js"></script>
-</html> 
+</html>
