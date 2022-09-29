@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Our Store</title>
+<meta name="keywords" content="Latest Blog" />
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap" rel="stylesheet">
+<link href="css/stylesheet.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,800&display=swap" rel="stylesheet">
+<script src="js/wow.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="css/all.css">
+<link href="css/animate.css" rel="stylesheet"/>
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet" />
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="css/swiper.min.css" type="text/css" rel="stylesheet" media="screen" />
+<script src="js/swiper.jquery.js" type="text/javascript"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<script src="js/jquery.zoom.js"></script>
+<script src="js/thestore.js"></script>
+<link href="css/opencart.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="css/magnific-popup.css" type="text/css" rel="stylesheet" media="screen" />
+<script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+<script>
+new WOW().init();
+</script>
+</head>
+<body onload="myuser()">
+<!-- loader -->
+<div class="loader" id="window">
+<img src="image/preloader.gif" id="hourglass2" alt="hourglass" title="hourglass">
+</div>
+<!-- loader end -->
+<script>
+$(window).load(function(){
+setTimeout(function(){
+$('#window').hide();
+},500);          
+})
+</script> 
+<header class="main-menu">
+<div class="header_wrapper_home">
+<div class="container-fluid">
+	<!-- destop vergian -->
+	<div class="row header_sec destop_header">
+		<div class="col-sm-4 rtl_logo">
+			<div id="logo">
+				<a href="#"><img src="image/logos.png" title="Your Store" alt="Your Store" class="img-responsive" /></a>
+			</div>
+		</div>
+		<!-- my account -->
+		<div class="col-sm-8">
+			<div class="text_account_wrapper pull-right">
+				<div class="header_transaction header_account">
+					<a href="#" title="My Account" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-o faicons"></i> <span class="hidden-xs hidden-sm hidden-md"id="user">account</span> <span class="caret"></span></a>
+					<ul class="dropdown-menu dropdown-menu-right megamenu">
+						<li><a href="register.html" id="register">Register</a>
+						</li>
+						<li><a href="login.html" id="login">Login</a>
+
+						</li>
+						<li>
+							<a  id="logout" href="#" onclick="logout()">Logout</a>
+
+						</li>
+
+					</ul>					  
+				</div>
+				<!-- cart -->
+				<div class="header_transaction heder_cart">
+					<div id="cart" class="btn-group btn-block">
+						<a style="color:rgb(0, 106, 106)" href="cart.html" class="cart"><button type="button" class="btn btn-inverse btn-block btn-lg dropdown-toggle"></i> My Cart <span class="cart_qut">0</span> </button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</header>
+<!-- header section end-->
+
+<!--menu-->
+<div class="header_menu">
+<div class="container-fluid">
+<div class="row">
+		<nav id="menu" class="navbar">
+		<div class="navbar-header"><span id="category" class="visible-xs"> Menu </span>
+		<button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+		<i class="fa fa-bars"></i></button>
+		</div>
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a>
+				<li>
+				<a href="latast-blog.html">About</a>
+				</li>
+				<li>
+				<a href="latast-blog.html">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>
+</div>
+</div>
+<!--menu end-->
+<div id="common-home" class="home-page">
+<div class="row">
+<div id="content" class="col-sm-12">
+	<div class="swiper-viewport homeslider">
+		<div id="slideshow0" class="swiper-container">
+			<div class="swiper-wrapper">       
+			<div class="swiper-slide text-center"><a href="#"><img src="image/banner1.jpg" alt="banner1" class="img-responsive" /></a>
+		</div>
+			<div class="swiper-slide text-center"><a href="#">
+			<img src="image/banner2.jpg" alt="banner2" class="img-responsive" /></a>
+	</div>
+			<div class="swiper-slide text-center"><a href="#">
+			<img src="image/banner3.jpg" alt="banner3" class="img-responsive" /></a>
+	</div>
+</div> 
+</div>
+<div class="swiper-pagination slideshow0">
+	</div>
+		<div class="swiper-pager">
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<!-- shop by category -->
+<div id="category" class="shop_by_category">
+<div class="container-fluid">
+<div class="comman_title text-center">
+	<h2 class="wow fadeInUp">Most Featured Products</h2>
+</div>
+	<div class="product_mail-wrapper row product-section">
+		<div id="category_block"  class="owl-carousel">
+				
+		</div>
+	</div>
+</div>
+</div>
+<!-- shop by category end-->
+ 
+<!-----New product-------->
+<div class="product_wrapper filtertab_back">
+<div class="container-fluid">
+<div class="row">
+	<div class="comman_title wow bounceInLeft">
+		<h2>Our Products</h2>
+	</div>
+	<!-- tabs -->
+		<ul class="nav nav-tabs wow bounceInRight">
+			<button data-filter="all" class="btn-default btn-clicked">All</button>
+			<button data-filter="clothes" class="btn-default btn-clicked">Clothes</button>
+			<button data-filter="watch" class="btn-default btn-clicked">Watch</button>
+			<button data-filter="mobile" class="btn-default btn-clicked">Mobile</button>
+			
+		</ul>
+
+		<div style="margin-top:50px" class="wow fadeInUp">
+			<div class="row" id="product-layout">
+
+		</div>
+	</div>
+</div>
+
+
+	
+</div>
+</div>
+<div> 
+<div class="Offer_banner_wrapper">
+<div class="container-fluid">
+	<div class="row">
+		<div class="banner_Offers">
+		<h3>Visit Us</h3>
+		<h2><span>Just </span>Now!</h2>
+		<p class="btn-wrapper"><a href="about.html" class="btn btn-primary">Learn more</a></p>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+<!--------------------// client area-------------->						
+<div style="margin-top:50px;margin-bottom:50px;" class="clients_logo" id="clients_logo">
+<div class="container product_wrapper">
+<div class="row">
+		<div id="carousel0"  class="owl-carousel">				
+		<div class="item ">
+			<div class="text-center"><img src="image/applelogo.png" alt="Starbucks" class="img-responsive wow fadeInUp" /></div>
+		</div> 				
+		<div class="item ">
+			<div class="text-center"><img src="image/samsunglogo.png" alt="Disney" class="img-responsive wow fadeInUp" /></div>
+		</div> 				
+		<div class="item ">
+			<div class="text-center"><img src="image/bershekaa.png" alt="Dell" class="img-responsive wow fadeInUp" /></div>
+		</div> 				
+		<div class="item ">
+			<div class="text-center"><img src="image/hmlogo.png" alt="RedBull" class="img-responsive wow fadeInUp" /></div>
+		</div> 				
+		<div class="item ">
+			<div class="text-center"><img src="image/rolexlogo.png" alt="NFL" class="img-responsive wow fadeInUp" /></div>
+		</div> 				
+		<div class="item ">
+			<div class="text-center"><img src="image/icewatchlogo.png" alt="Sony" class="img-responsive wow fadeInUp" /></div>
+		</div> 				
+		<div class="item ">
+			<div class="text-center"><img src="image/montblanclogo.png" alt="Coca Cola" class="img-responsive wow fadeInUp" /></div>
+		</div> 				
+		<div class="item ">
+			<div class="text-center"><img src="image/pullbear.png" alt="Burger King" class="img-responsive wow fadeInUp" /></div>
+		</div> 			 
+	</div>
+</div>
+</div>
+</div>
+<footer id="footer">
+<div class="container-fluid clear">
+<div class=" row">
+	<div class=" footer_links">
+	<!-- contact us -->
+		<div class="col-sm-3 col_footer footer_padding">
+			<div class="footer-inner-matter">
+				<h3 class="wow fadeInUp">Contact Us</h3>
+				<ul>
+					<li><img src="image/icon-phone.png"><p>Hotline Free 24/24:</p><span><i class="fa fa-volume-control-phone"></i>(+800) 123 456 789</span></li>
+					<li><i class="fa fa-map-marker"></i> 622 Vernon Drive Flushing, NY 11354</li>
+					<li class="email"><i class="fa fa-envelope"></i> company123@gmail.com</li>
+				</ul>
+				<div class="social_media_wrapper">
+				<ul>
+					<li class="facebook"><a href=""><i class="fa fa-facebook-square"></i></a></li>
+					<li class="skype"><a href=""><i class="fa fa-skype"></i></a></li>
+					<li class="youtube"><a href=""><i class="fa fa-youtube-square"></i></a></li>
+					<li class="google"><a href=""><i class="fa fa-google-plus-square"></i></a></li>
+					<li class="linkedin"><a href=""><i class="fa fa-linkedin-square"></i></a></li>
+				</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div><!---------/ end cntact us--------->
+		<!-- information -->
+		<div class="col-sm-3 col_footer footer_padding">
+			<div class="footer-inner-matter">
+				<h3 class="wow fadeInUp">Information</h3>
+				<ul class="list-unstyled">
+						<li><a href="about.html" class="wow fadeInUp"> About Us</a></li>
+						<li><a href="#" class="wow fadeInUp"> Delivery Information</a></li>
+						<li><a href="#" class="wow fadeInUp"> Privacy Policy</a></li>
+					<li><a href="#" class="wow fadeInUp"> Terms &amp; Conditions</a></li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<!-- / information end-->
+		<!-- extra -->
+		<div class="col-sm-3 col_footer footer_padding">
+			<div class="footer-inner-matter">
+				<h3 class="wow fadeInUp">Extras</h3>
+				<ul class="list-unstyled">
+					<li><a href="contact.html" class="wow fadeInUp"> Contact Us</a></li>
+					<li><a href="brands.html" class="wow fadeInUp"> Brands</a></li>
+					<li><a href="index.html" class="wow fadeInUp"> Specials</a></li>
+					<li><a href="return.html" class="wow fadeInUp"> Returns</a></li>
+					<li><a href="#" class="wow fadeInUp"> Gift Certificates</a></li>
+					<li><a href="#" class="wow fadeInUp"> Affiliate</a></li>
+					<li><a href="sitemap.html" class="wow fadeInUp"> Site Map</a></li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+			</div>
+		<!-- / extra end-->
+		<!-- play_store -->
+		<div class="col-sm-3 col_footer footer_padding Get_the_App">
+			<div class="footer-inner-matter">
+				<h3 class="wow fadeInUp"><!--{{ text_extra }}--->Get The App
+				</h3>
+				<h4>GreenLife App Is Now Available On Google 
+				Play &amp; App Store. Get It Now.
+				</h4>
+				<div class="images_dat_dec">
+					<div class="img_1">
+					<a href="#"><img src="image/icon1-app.jpg"></a>
+					</div>
+					<div class="img_2">
+					<a href="#"><img src="image/icon-app.jpg"></a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>	
+		<!-- / play_store end -->
+		<!-- newsletters -->
+<div class="new_bottom_newsletter">
+<div class="col-sm-12 col_footer">
+<div class="head_newsletter text-center">
+	<div class="head_newsletter_one">
+		<div class="footer-inner-matter news_letter_subscription wow fadeInUp">
+			<div id="newsletterModule-footer" class="">
+				<div id="newsletterFooterModule0">
+					<div class="news_latter" id="news_latter">
+						<div class="">
+							<div class="row" id="subsribe">	
+								<div class="successmsg">
+								</div>
+								<div class="news_latte_text">
+									<div class="col-sm-4 text-left">
+										<h3>Join Our<span> Newsletter Now</span></h3>
+									</div>
+									<div class="col-sm-3 newletter_desc text-left">
+									<p>Join 10.000+ subscribers and get a new discount coupon.</p>
+									</div>
+									<!-- <p>Subscribe to our newsletter to receive special offers and latest news. </p> -->
+									<div class="col-sm-5">
+										<div class="form-group required text-right">
+											<div class="news_latter_form">
+												<div class="input-news">
+													<input type="text" id="input-newsletter-email" class="fem form-control" placeholder="Enter Your Email Address here" value="" name="email"/>
+												</div>
+												<div class="subscribe-btn input-group-btn">
+													<a id="button-subsribe" class="btn btn-primary btn-xs">Subscribe</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>			
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
+</div> 
+</div> 	 
+</div>
+<div class="clear"> </div>
+		<!--- copy-right-area -->
+		<div class=" social_footer copy_right_wrapper">		
+		<div class="col-sm-6 rtl_text">
+		<div class="copy-right">
+			<p class="wow fadeInDown  animated" style="visibility: visible; animation-name: fadeInDown;">© Copyright 2022 by E-store. All right Reserved - Design By <a href="#" target="_blank">Group 5</a></p>
+		</div>
+		</div>
+		<!-------/ end copyright----------->
+		<!--- payment_links -->
+		<div class="col-sm-6 rtl_text">
+			<div class="payment_method_footer">
+				<div class="payment_option_methods">
+					<ul>
+						<li><a href=""><img src="image/payment-1.png"></a></li>
+						<li><a href=""><img src="image/payment-2.png"></a></li>
+						<li><a href=""><img src="image/payment-3.png"></a></li>
+						<li><a href=""><img src="image/payment-4.png"></a></li>
+						<li><a href=""><img src="image/payment-5.png"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="clear"> </div>
+		</div>
+	</div>
+</div>
+</div>
+<!--------/ end payment link------------>
+</footer>
+<div class="container">
+<div class="top_button">
+<a class="back-to-top" style="cursor:pointer; margin-right: 15px;" id="top-scrolltop"><i class="fa fa-angle-up"></i></a>
+</div>
+</div>
+<script src="script/product.js"></script>
+<script src="script/main.js"></script>
+<script src="script/filter.js"></script>
+<script src="script/most-featured.js"></script>
+<!-- <script src="script/signscript.js"> </script> -->
+<script src="script/script.js"></script>
+</body>
+</html>
