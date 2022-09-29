@@ -1,5 +1,5 @@
- // for sign up and storing data 
- var dataarr = JSON.parse(localStorage.getItem('data')) || [];
+// for sign up and storing data 
+var dataarr = JSON.parse(localStorage.getItem('data')) || [];
 
 
 var msgerror = document.getElementById('error');
@@ -7,10 +7,12 @@ var msgerror = document.getElementById('error');
 // sign up saving data and validation
 function store(event)
 {   
-        var firstName = document.getElementById('Fname');
-        var lastName = document.getElementById('Lname');
-        var mail = document.getElementById('mail');
-        var password = document.getElementById('pass');
+        var firstName = document.getElementById('input-firstname');
+        var lastName = document.getElementById('input-lastname');
+        var mail = document.getElementById('input-email');
+        var password = document.getElementById('input-password');
+        var confirmpass = document.getElementById('input-confirm');
+
         var validemail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
         // var validpass =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm;
         //sign up validation
@@ -54,10 +56,22 @@ function store(event)
             var objData = JSON.parse(Datastring) || [];
             if(objData.length == 0)
             {
-                dataarr.push(data);
-                // console.log(dataarr);
-                localStorage.setItem('data',JSON.stringify(dataarr));
-                alert('Your account has been created Successfully!!');
+                //confirm password
+                if(password.value == confirmpass.value)
+                {
+                    dataarr.push(data);
+                    localStorage.setItem('data',JSON.stringify(dataarr));
+                    // alert('Your account has been created Successfully!!');
+                    window.location.href = 'login.html';
+
+                }
+                else 
+                {
+                    msgerror.style.display='block';
+                   msgerror.textContent = 'password not match!!';
+    
+                }
+                
 
             }
             else
@@ -75,12 +89,21 @@ function store(event)
             
                 if(!exist)
                 {
-                        dataarr.push(data);
-                        // console.log(dataarr);
-                        localStorage.setItem('data',JSON.stringify(dataarr));
-                        alert('Your account has been created Successfully!!');
-                        // window.location.href = 'sign-in.html';
-                        location.assign('sign-in.html');
+                       //confirm password
+                        if(password.value == confirmpass.value)
+                        {
+                            dataarr.push(data);
+                            localStorage.setItem('data',JSON.stringify(dataarr));
+                            // alert('Your account has been created Successfully!!');
+                            window.location.href = 'login.html';
+
+                        }
+                        else 
+                        {
+                            msgerror.style.display='block';
+                            msgerror.textContent = 'password not match!!';
+            
+                        }
 
                 }
             } 
@@ -97,8 +120,8 @@ function check(event){
      var objData = JSON.parse(Datastring) || [];
      
     // let msgerror = document.getElementById('error');
-    var userMail = document.getElementById('umail');
-    var userPass = document.getElementById('upass');
+    var userMail = document.getElementById('input-email');
+    var userPass = document.getElementById('input-password');
     // var userRemember = document.getElementById("remembrMe");
     if(userMail.value.length == 0)
     {
@@ -127,7 +150,10 @@ function check(event){
                        
                         // alert('You are logged in..');
                         var username = objData[i].firstName;
-                        sessionStorage.username=username; // set user session
+                        var mail = objData[i].mail;
+                        // set user session
+                        sessionStorage.username=username;
+                        sessionStorage.email=mail; 
                         window.location.href = 'index.html'; 
                  
                    
@@ -148,15 +174,28 @@ function check(event){
 // get user session
 function myuser()
 {
+    var regist = document.getElementById('register');
+    var login = document.getElementById('login');
+    var logout = document.getElementById('logout');
+
+    regist.style.display='none';
+    login.style.display='none';
+    logout.style.display='none';
+
+
     var usercon= document.getElementById('user');
     if (sessionStorage.username)
     {
         usercon.textContent = sessionStorage.username;
+        logout.style.display='block';
+
 
     }
     else 
     {
-        window.location.href = 'index.html';
+        usercon.textContent = 'Account';
+        regist.style.display='block';
+        login.style.display='block';
 
     }
 }
@@ -165,7 +204,9 @@ function myuser()
 function logout()
 {
     sessionStorage.removeItem('username');
-    window.location.href = 'index.html';
+    sessionStorage.removeItem('email');
+    myuser()
+    //window.location.href = 'index.html';
 
 }
 function auth()
@@ -179,15 +220,31 @@ function auth()
 
 function msg()
 {
+    var userMail = document.getElementById('input-email');
+    var name = document.getElementById('input-name');
+    var msg = document.getElementById('input-enquiry');
+    if(userMail.value.length == 0)
+    {
+        msgerror.style.display='block';
+        msgerror.textContent = 'Email may not be empty!!';
 
-    alert('Thank You , Your Message Sent Successfully');
-    if (sessionStorage.username)
-    {
-        location.assign('index.html');
     }
-    else
+    else if(msg.value.length == 0)
     {
-        location.assign('index.html');
+        msgerror.style.display='block';
+        msgerror.textContent = 'Please insert your message!!';
+
+    }
+    else if(name.value.length == 0)
+    {
+        msgerror.style.display='block';
+        msgerror.textContent = 'name may not be empty!!';
+
+    }else {
+        alert('Thank You , Your Message Sent Successfully');
+        // location.assign('index.html');
+        window.location.href = 'index.html';
+
 
     }
 
@@ -196,7 +253,7 @@ function msg()
 
 function Showpswd()
 {
-    var myPass = document.getElementById('pass'),
+    var myPass = document.getElementById('input-password'),
     myEye  = document.getElementById('eye');
     myEye.onclick = function() {
      'use strict';
@@ -211,5 +268,3 @@ function Showpswd()
      }
  };
 }
-
-
