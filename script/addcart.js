@@ -7,15 +7,28 @@ for (let i = 0;i<addCart.length;i++){
         CartNumber(product[i])
         totalCost(product[i])
         }
-        else{alert('please sign in first!')}
+        else{alert('please sign in first!')
+        window.location.href = 'login.html';
+    }
     })
 }
+
 function onLoadCart(){
     let productNum = localStorage.getItem("CartNumber");
+    productNum =  parseInt(productNum);
+    // console.log(productNum);
     if(productNum){
         document.querySelector(".cart span").textContent = productNum;
-
     }
+    if(isNaN(productNum) ||productNum == 0){
+        //  window.location.href = 'index.html';
+        document.getElementById("checkoutss").disabled = true;
+        document.getElementById("checkoutss").style.background="grey";
+        document.getElementById("checkoutss").style.color="white";
+    }else{
+        document.getElementById("checkoutss").disabled = false
+    }
+    
 
 }
 function CartNumber(product, action){
@@ -166,16 +179,18 @@ function deleteButtons() {
     let productNum = localStorage.getItem("CartNumber");
     let cartCost = localStorage.getItem("totalCost");
     let cartItems = localStorage.getItem("productsInCart");
+    // productNum =  parseInt(productNum);
     cartItems = JSON.parse(cartItems);
+    // if(productNum == 0){
+    //     //  window.location.href = 'index.html';
+    //     // document.getElementById("checkoutss").disabled = true;
+    //     // document.getElementById("checkoutss").style.background="grey";
+    //     // document.getElementById("checkoutss").style.color="white";
+    //     console.log('empty');
+    // }else{
+    //     document.getElementById("checkoutss").disabled = false
+    // }
     let productName;
-    if(productNum == 0){
-        //  window.location.href = 'index.html';
-        document.getElementById("checkoutss").disabled = true;
-        document.getElementById("checkoutss").style.background="grey";
-        document.getElementById("checkoutss").style.color="white";
-    }else{
-        document.getElementById("checkoutss").disabled = false
-    }
     // console.log(cartItems);
     for(let i=0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener('click', () => {

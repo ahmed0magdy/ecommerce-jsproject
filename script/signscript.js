@@ -138,7 +138,8 @@ function check(event){
     else{
         if(objData.length == 0)
         {
-            msgerror.textContent = 'No Data Please Sign up first!!';
+            msgerror.textContent = 'Email Not Registered!!';
+            // window.location.href = 'register.html';
         }
         else
         {
