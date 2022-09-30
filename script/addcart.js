@@ -15,7 +15,7 @@ function onLoadCart(){
         document.querySelector(".cart span").textContent = productNum;
     }
     if(document.getElementById("checkoutss")){
-    if(isNaN(productNum) || productNum == 0 || !sessionStorage.username){
+    if(isNaN(productNum) || productNum == 0 || !sessionStorage.username || !productNum){
         document.getElementById("checkoutss").disabled = true;
         document.getElementById("checkoutss").style.background="grey";
         document.getElementById("checkoutss").style.color="#a8a7a5";
