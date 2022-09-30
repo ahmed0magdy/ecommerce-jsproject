@@ -48,6 +48,14 @@ function setItems(product){
     var cartItems = localStorage.getItem("productsInCart");
     cartItems = JSON.parse(cartItems)
     // console.log("my cart items are : " , cartItems); //display clicked item
+    if(productNum == 0){
+        //  window.location.href = 'index.html';
+        document.getElementById("checkoutss").disabled = true;
+        document.getElementById("checkoutss").style.background="grey";
+        document.getElementById("checkoutss").style.color="white";
+    }else{
+        document.getElementById("checkoutss").disabled = false
+    }
     if(cartItems != null){
         
         if(cartItems[product.name] == undefined){
@@ -98,7 +106,7 @@ function displayCart() {
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += 
-            `<div class="product"><ion-icon style="cursor:pointer" name="close-circle"></ion-icon><img src="${item.img}" />
+            `<div style="display:flex;flex-direction:row;justify-content:space-around;text-align:center;align-items:center"><div class="product"><ion-icon style="cursor:pointer" name="close-circle"></ion-icon><img src="${item.img}" style="max-width:150px;" />
                 <span class="sm-hide">${item.name}</span>
             </div>
             <div class="price sm-hide">$ ${item.price},00</div>
@@ -107,11 +115,11 @@ function displayCart() {
                     <span>${item.quantity}</span>
                 <ion-icon style="cursor:pointer" class="increase" name="arrow-dropright-circle"></ion-icon>   
             </div>
-            <div class="total">$ ${item.quantity * item.price},00</div>`;
+            <div class="total">$ ${item.quantity * item.price},00</div></div>`;
         });
 
         productContainer.innerHTML += `
-            <div class="basketTotalContainer">
+            <div class="basketTotalContainer" style="position:absolute;right:350px;">
                 <h4 class="basketTotalTitle">Basket Total</h4>
                 <h4 class="basketTotal">$ ${cartCost},00</h4>
             </div>`
@@ -168,15 +176,15 @@ function deleteButtons() {
     let cartItems = localStorage.getItem("productsInCart");
     cartItems = JSON.parse(cartItems);
     let productName;
-    console.log(cartItems);
     if(productNum == 0){
-        // window.location.href = 'index.html';
+        //  window.location.href = 'index.html';
         document.getElementById("checkoutss").disabled = true;
         document.getElementById("checkoutss").style.background="grey";
         document.getElementById("checkoutss").style.color="white";
     }else{
         document.getElementById("checkoutss").disabled = false
     }
+    // console.log(cartItems);
     for(let i=0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener('click', () => {
             productName = deleteButtons[i].parentElement.textContent.trim();
@@ -193,14 +201,7 @@ function deleteButtons() {
     }
 }
 
-// let cartItems = localStorage.getItem('productsInCart');
-//     cartItems = JSON.parse(cartItems);
-//  console.log(cartItems)
-//   if(cartItems===""){
-//     document.getElementById("checkoutss").disabled = true;
-// }else{
-//     document.getElementById("checkoutss").disabled = false
-// }
+
 onLoadCart();
 displayCart();
 
