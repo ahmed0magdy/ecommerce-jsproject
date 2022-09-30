@@ -1,3 +1,8 @@
+if (localStorage.getItem("CartNumber") == 0){
+  window.location.replace("index.html");
+}
+
+
 // Name and email
 var userName = sessionStorage.getItem("username");
 var userInputName= document.getElementById('name')
@@ -25,15 +30,9 @@ document.getElementById('address').addEventListener('keyup', e => {
 });
 
 
-document.getElementById("myForm").onclick = function() {
-    submission();
-    
-}
-function submission() {
-  window.location.href="index.html";
-  alert("The order is completed");
-  localStorage.clear();
-  localStorage.setItem("CartNumber", 0);
-  document.getElementById("checkouu").disabled = true
-
-};
+document.getElementById("submit-order").addEventListener('click', function() {
+    alert("Successful Purchase");
+    localStorage.clear();
+    localStorage.setItem("CartNumber", 0);
+  })
+  
