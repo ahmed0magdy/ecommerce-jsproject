@@ -1,5 +1,5 @@
  // for sign up and storing data 
- var dataarr = JSON.parse(localStorage.getItem('data')) || [];
+ var dataarr = JSON.parse(sessionStorage.getItem('data')) || [];
 
 
 var msgerror = document.getElementById('error');
@@ -50,7 +50,7 @@ function store(event)
                 password:password.value
              }
             var exist = false ;
-            var Datastring = localStorage.getItem('data');
+            var Datastring = sessionStorage.getItem('data');
             var objData = JSON.parse(Datastring) || [];
             if(objData.length == 0)
             {
@@ -58,7 +58,7 @@ function store(event)
                 if(password.value == confirmpass.value)
                 {
                     dataarr.push(data);
-                    localStorage.setItem('data',JSON.stringify(dataarr));
+                    sessionStorage.setItem('data',JSON.stringify(dataarr));
                     // alert('Your account has been created Successfully!!');
                     window.location.href = 'login.html';
 
@@ -91,7 +91,7 @@ function store(event)
                         if(password.value == confirmpass.value)
                         {
                             dataarr.push(data);
-                            localStorage.setItem('data',JSON.stringify(dataarr));
+                            sessionStorage.setItem('data',JSON.stringify(dataarr));
                             // alert('Your account has been created Successfully!!');
                             window.location.href = 'login.html';
 
@@ -114,7 +114,7 @@ function store(event)
 //checking for login operation
 function check(event){
    
-    var Datastring = localStorage.getItem('data');
+    var Datastring = sessionStorage.getItem('data');
      var objData = JSON.parse(Datastring) || [];
      
     // let msgerror = document.getElementById('error');

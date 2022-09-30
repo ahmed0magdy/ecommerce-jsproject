@@ -11,11 +11,11 @@ function onLoadCart(){
     let productNum = localStorage.getItem("CartNumber");
     // productNum =  parseInt(productNum);
     // console.log(productNum);
-    if(document.getElementById("checkoutss")){
     if(productNum){
         document.querySelector(".cart span").textContent = productNum;
     }
-    if(isNaN(productNum) ||productNum == 0 || !sessionStorage.username){
+    if(document.getElementById("checkoutss")){
+    if(isNaN(productNum) || productNum == 0 || !sessionStorage.username){
         document.getElementById("checkoutss").disabled = true;
         document.getElementById("checkoutss").style.background="grey";
         document.getElementById("checkoutss").style.color="#a8a7a5";

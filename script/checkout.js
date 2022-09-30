@@ -33,6 +33,7 @@ function submission() {
   window.location.href="index.html";
   alert("The order is completed");
   localStorage.clear();
-  document.getElementById("checkoutss").disabled = true
+  localStorage.setItem("CartNumber", 0);
+  document.getElementById("checkouu").disabled = true
 
 };
