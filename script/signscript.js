@@ -217,6 +217,14 @@ function auth()
 
     }
 }
+function auths()
+{
+    if (!sessionStorage.username)
+    {
+        window.location.href = 'index.html';
+
+    }
+}
 
 function msg()
 {

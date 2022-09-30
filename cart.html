@@ -38,7 +38,7 @@
 	</script>
 </head>
 
-<body onload="myuser()">
+<body onload="myuser();auths()">
 	<!-- loader -->
 	<div class="loader" id="window">
 		<img src="image/preloader.gif" id="hourglass2" alt="hourglass" title="hourglass">
@@ -112,13 +112,10 @@
 						<ul class="nav navbar-nav">
 							<li><a href="index.html">Home</a>
 							<li>
-								<a href="latast-blog.html">About</a>
+								<a href="about.html">About</a>
 							</li>
 							<li>
-								<a href="latast-blog.html">Contact</a>
-							</li>
-							<li>
-								<a href="cart.html">Cart</a>
+								<a href="contact.html">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -143,9 +140,9 @@
 					</tr>
 				</thead>
 				<tbody>
-					<div class="products">
-
-					</div>
+					<!-- <div class="products">
+						
+					</div> -->
 				</tbody>
 			</table>
 
@@ -166,7 +163,7 @@
 				<a href="index.html" class="btn-checkout">Continue Shopping</a>
 			</li>
 			<li>
-				<a href="checkout.html" class="btn-checkout">Go To Checkout</a>
+			<a href="checkout.html"><input type="submit" value="Go to Checkout" id="checkoutss" class="btn-checkout" style="padding-bottom:40px;"></a>
 			</li>
 		</ul>
 	</div>
@@ -337,8 +334,9 @@
 	</footer>
 
 </body>
-<script src="product.js"></script>
-<script src="addcart.js"></script>
+<script src="script/product.js"></script>
+<script src="script/addcart.js"></script>
+<script src="script/signscript.js"></script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
 </html>

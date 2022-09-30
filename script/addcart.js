@@ -2,13 +2,17 @@
 let addCart =  document.querySelectorAll(".addProduct");
 for (let i = 0;i<addCart.length;i++){
     addCart[i].addEventListener("click",()=>{
+        if (sessionStorage.username)
+        {
         CartNumber(product[i])
         totalCost(product[i])
+        }
+        else{alert('please sign in first!')}
     })
 }
 function onLoadCart(){
     let productNum = localStorage.getItem("CartNumber");
-    if([productNum]){
+    if(productNum){
         document.querySelector(".cart span").textContent = productNum;
 
     }
@@ -80,6 +84,7 @@ function totalCost( product, action ) {
     
     } else {
         localStorage.setItem("totalCost", product.price);
+
     }
 }
 function displayCart() {
@@ -93,23 +98,23 @@ function displayCart() {
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += 
-            `<div class="product"><ion-icon name="close-circle"></ion-icon><img src="${item.img}" />
+            `<div class="product"><ion-icon style="cursor:pointer" name="close-circle"></ion-icon><img src="${item.img}" />
                 <span class="sm-hide">${item.name}</span>
             </div>
             <div class="price sm-hide">$ ${item.price},00</div>
             <div class="quantity">
-                <ion-icon class="decrease" name="arrow-dropleft-circle"></ion-icon>
+                <ion-icon style="cursor:pointer" class="decrease" name="arrow-dropleft-circle"></ion-icon>
                     <span>${item.quantity}</span>
-                <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
+                <ion-icon style="cursor:pointer" class="increase" name="arrow-dropright-circle"></ion-icon>   
             </div>
             <div class="total">$ ${item.quantity * item.price},00</div>`;
         });
 
         productContainer.innerHTML += `
-        <div class="basketTotalContainer">
-            <h4 class="basketTotalTitle">Basket Total</h4>
-            <h4 class="basketTotal">$ ${cartCost},00</h4>
-        </div>`
+            <div class="basketTotalContainer">
+                <h4 class="basketTotalTitle">Basket Total</h4>
+                <h4 class="basketTotal">$ ${cartCost},00</h4>
+            </div>`
 
         deleteButtons();
         manageQuantity();
@@ -164,7 +169,14 @@ function deleteButtons() {
     cartItems = JSON.parse(cartItems);
     let productName;
     console.log(cartItems);
-
+    if(productNum == 0){
+        // window.location.href = 'index.html';
+        document.getElementById("checkoutss").disabled = true;
+        document.getElementById("checkoutss").style.background="grey";
+        document.getElementById("checkoutss").style.color="white";
+    }else{
+        document.getElementById("checkoutss").disabled = false
+    }
     for(let i=0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener('click', () => {
             productName = deleteButtons[i].parentElement.textContent.trim();
@@ -181,6 +193,14 @@ function deleteButtons() {
     }
 }
 
+// let cartItems = localStorage.getItem('productsInCart');
+//     cartItems = JSON.parse(cartItems);
+//  console.log(cartItems)
+//   if(cartItems===""){
+//     document.getElementById("checkoutss").disabled = true;
+// }else{
+//     document.getElementById("checkoutss").disabled = false
+// }
 onLoadCart();
 displayCart();
 
