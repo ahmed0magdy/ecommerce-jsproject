@@ -48,14 +48,6 @@ function setItems(product){
     var cartItems = localStorage.getItem("productsInCart");
     cartItems = JSON.parse(cartItems)
     // console.log("my cart items are : " , cartItems); //display clicked item
-    if(productNum == 0){
-        //  window.location.href = 'index.html';
-        document.getElementById("checkoutss").disabled = true;
-        document.getElementById("checkoutss").style.background="grey";
-        document.getElementById("checkoutss").style.color="white";
-    }else{
-        document.getElementById("checkoutss").disabled = false
-    }
     if(cartItems != null){
         
         if(cartItems[product.name] == undefined){
