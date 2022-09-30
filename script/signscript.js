@@ -207,7 +207,7 @@ function logout()
     sessionStorage.removeItem('username');
     sessionStorage.removeItem('email');
     myuser()
-    //window.location.href = 'index.html';
+    window.location.href = 'login.html';
 
 }
 function auth()
