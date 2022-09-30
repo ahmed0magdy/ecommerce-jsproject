@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Checkout</title>
+        <meta charset="utf-8" />
+        <meta name="viewpoint" content="width=device-width,initial-scal=1.0">
+        <meta http-equip="X-UA-compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+    
+  </div>
+        <section id="nav-bar">
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: green;">
+              
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="pull-right" >
+              <a style="color:white; font-size: 30px;" href="index.html">Ecommerce Website</a>
+            </div> 
+              <div class="collapse navbar-collapse" id="navbarNav">
+              
+                <ul class="navbar-nav ml-auto">
+                 <li class="nav-item">
+                    <a style="color:white;" class="nav-link" href="index.html">Home</a>
+                  </li>
+                 <li class="nav-item">
+                    <a style="color:white;" class="nav-link" href="product.html">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a style="color:white;" class="cart nav-link" href="cart.html">Cart <span>0</span></a>
+                
+                  </li>
+                  
+                  
+                  <li class="nav-item">
+                    <a style="color:white;" class="nav-link" href="aboutus.html">About Us</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a style="color:white;" class="nav-link" href="services.html">Our Services</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a style="color:white;" class="nav-link" href="team.html" tabindex="-1" aria-disabled="true">Our Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a style="color:white;" class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                  
+                  
+                </ul>
+              </div>
+            </nav>
+        </section>
+    <body id="checkout-page">
+
+        <div id="site">
+            
+            <div id="content">
+                    <h1>Checkout</h1>
+                    
+                    <div class="container-products">
+                      <!-- <header id="masthead">
+                        <h2>CART</h2>
+                      </header> -->
+                      <table class="shopping-cart">
+                        <thead>
+                          <tr>
+                            <th scope="col">Delete</th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Details</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">QUANTITY</th>
+                            <th scope="col" colspan="2">Total</th>
+                          </tr>
+                        </thead>
+                        
+                        </tbody>
+                      </table>
+                
+                      <div class="products">
+                
+                      </div>
+                
+                    </div>
+                 
+                 
+                  <form action="order.html" method="post" id="checkout-order-form">
+                    <h2>Your Details</h2>
+                    <fieldset id="checkout-order-form">
+
+
+                   
+                    <div> 
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" data-type="string" data-message="This field cannot be empty" readonly />
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" data-type="expression" data-message="Not a valid email address" readonly/>
+                    </div> 
+                    <div>
+                        <label for="address">Address</label>
+                        <input class="land" type="text" name="address" id="address" data-type="string" data-message="This field cannot be empty" placeholder="example : address,street,landmark" autofocus />
+                    </div>
+                    <div>
+                        <label for="City">Location</label>
+                        <select name="city" id="city" data-type="string" data-message="This field cannot be empty">
+                            <option value="">Cairo</option>
+                            <option value="De">Alexandria</option>
+                            <option value="IN">Mansoura</option>
+                            <option value="IN">Aswan</option>
+                            <option value="IN">Portsaid</option>
+                        </select>
+                    </div>
+                    <br>
+                  </fieldset>
+                </form>
+                        
+
+                <ul id="shopping-cart-actions">
+                  <li>
+                    <form id="myForm" >
+                      <input type="submit" disabled id="submit-order" value="Submit" class="btn-main-check"/>
+                      </form> 
+                  </li>
+                  <li>
+                    <a href="cart.html">
+                      <button class="btn-main-check">Back to cart</button>
+                </a>
+                  </li>
+                </ul>
+                    
+
+                    <!-- <div class="buttons">
+                      <form id="myForm" >
+                        <input type="submit" disabled id="submit-order" value="Submit" class="btn-checkout btn-success"/>
+                        </form> 
+						<a href="cart.html">
+                            <button class="btn-checkout btn-success">Back to cart</button>
+                      </a>
+                    </div> -->
+            </div>
+        </div>
+        
+        <script src="script/product.js"></script>
+        <script src="script/addcart.js"></script>
+        <script src="script/checkout.js"> </script>
+        <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
