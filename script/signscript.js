@@ -42,8 +42,6 @@ function store(event)
                 ////  registering data 
         else 
         {
-             msgerror.textContent = 'welcome !';
-             msgerror.style.color='green';
              var data =
              {
                 firstName:firstName.value,

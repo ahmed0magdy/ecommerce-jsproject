@@ -9,19 +9,25 @@ for (let i = 0;i<addCart.length;i++){
 
 function onLoadCart(){
     let productNum = localStorage.getItem("CartNumber");
-    // productNum =  parseInt(productNum);
+     
     // console.log(productNum);
     if(productNum){
         document.querySelector(".cart span").textContent = productNum;
     }
-    if(isNaN(productNum) ||productNum == 0 || !sessionStorage.username){
+    if(isNaN(productNum) || !sessionStorage.username || !productNum){
         document.getElementById("checkoutss").disabled = true;
         document.getElementById("checkoutss").style.background="grey";
         document.getElementById("checkoutss").style.color="#a8a7a5";
     }else{
         document.getElementById("checkoutss").disabled = false
     }
-    
+    productNum =  parseInt(productNum);
+    if(productNum == 0)
+    {
+    document.getElementById("checkoutss").disabled = true;
+    document.getElementById("checkoutss").style.background="grey";
+    document.getElementById("checkoutss").style.color="#a8a7a5";
+}
 
 }
 function CartNumber(product, action){

@@ -25,9 +25,14 @@ document.getElementById('address').addEventListener('keyup', e => {
 });
 
 
-document.getElementById("myForm").onsubmit = function() {
-    submission()
-    localStorage.clear();
+document.getElementById("myForm").onclick = function() {
+    submission();
+    
 }
 function submission() {
-  alert("The order is completed")};
+  window.location.href="index.html";
+  alert("The order is completed");
+  localStorage.clear();
+  document.getElementById("checkoutss").disabled = true
+
+};
